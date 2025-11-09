@@ -1,4 +1,4 @@
-🧩 SideProject Platform
+**🧩 SideProject Platform**
 
 협업 완주율을 높이기 위한 사이드프로젝트 매칭 플랫폼 (PHP + MySQL + HTML)
 
