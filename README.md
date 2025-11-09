@@ -33,15 +33,10 @@
 - 또는 URL 직접 입력  
 https://github.com/jinu217/sideproject.git
 
-markdown
-코드 복사
-
 ### ✅ 3) Local Path 선택  
 - 경로를 아래처럼 지정해 주세요 👇  
 C:\xampp\htdocs\sideproject
 
-yaml
-코드 복사
 - **[Clone]** 버튼 클릭  
 
 ### ✅ 4) 완료 후 GitHub Desktop 확인  
@@ -54,9 +49,6 @@ yaml
 ### ✅ 1) phpMyAdmin 접속  
 브라우저 주소창에 입력:
 http://localhost/phpmyadmin
-
-markdown
-코드 복사
 
 ### ✅ 2) 새 데이터베이스 생성  
 1. 좌측 상단 “**새로 만들기**” 클릭  
@@ -81,8 +73,6 @@ markdown
 2. 브라우저 주소창에 입력:
 http://localhost/sideproject/index.html
 
-yaml
-코드 복사
 3. 메인 페이지가 열리면 성공 🎉  
 
 ---
@@ -102,9 +92,6 @@ sideproject/
 ├── README.md # 설치 및 실행 가이드
 └── LICENSE # 오픈소스 라이선스
 
-yaml
-코드 복사
-
 ---
 
 ## 🔄 6. 깃허브 협업 방법 (GitHub Desktop 기준)
@@ -115,8 +102,6 @@ yaml
 3. 아래 입력란에 메시지를 적기:
 feat: update project creation UI
 
-yaml
-코드 복사
 4. **[Commit to main]** 클릭  
 5. 오른쪽 위 **[Push origin]** 클릭 → 깃허브에 업로드 완료 🎉
 
@@ -158,6 +143,4 @@ SOURCE C:/xampp/htdocs/sideproject/db/seed.sql;
 EXIT;
 브라우저에서 실행:
 
-arduino
-코드 복사
 http://localhost/sideproject
