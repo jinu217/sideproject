@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>SideProject MVP Demo</title>
+<style>
+  body{font-family:system-ui,Arial;max-width:1200px;margin:24px auto;padding:0 16px}
+  h2{margin-top:28px}
+  fieldset{margin:12px 0;padding:12px;border-radius:8px}
+  label{display:inline-block;min-width:120px}
+  input[type=text], textarea, select{width:100%;max-width:520px;padding:6px}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .col{flex:1 1 360px}
+  .col-wide{flex:1 1 520px}
+  button{padding:8px 12px;border-radius:8px;border:1px solid #ccc;background:#f7f7f7;cursor:pointer}
+  button.primary{background:#2b7cff;color:#fff;border-color:#2b7cff}
+  .pill{display:inline-block;padding:2px 8px;margin:2px;border-radius:16px;background:#eee}
+  table{border-collapse:collapse;width:100%} th,td{border:1px solid #ddd;padding:6px}
+  #log{white-space:pre-wrap;background:#0b1021;color:#cde;padding:10px;border-radius:8px;max-height:320px;overflow:auto}
+  .panel{border:1px solid #e6e6e6;border-radius:10px;padding:10px;margin-top:6px}
+  .muted{color:#777}
+</style>
+</head>
+<body>
+<h1>SideProject MVP Demo</h1>
+
+<button type="button" onclick="ping()">Ping API</button>
+
+<div class="row">
+  <div class="col">
+    <fieldset>
+      <legend>① 유저 전환</legend>
+      <div id="userList"></div>
+      <button type="button" onclick="refreshState()">새로고침</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>② 내 프로필</legend>
+      <div id="me" class="panel"></div>
+      <div class="muted" style="margin-top:6px">아래 입력은 "내 프로필"만 변경합니다.</div>
+      <label>닉네임</label><input id="nick" type="text"><br><br>
+      <label>소개</label><textarea id="intro" rows="3"></textarea><br><br>
+      <label>프로필 이미지 URL</label><input id="pimg" type="text" placeholder="/img/u1.png"><br><br>
+      <button type="button" class="primary" onclick="updateProfile()">프로필 저장</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>③ 팀원 프로필 (전용 패널)</legend>
+      <div class="muted" style="margin-bottom:6px">프로젝트 상세에서 팀원 pill을 클릭하면 여기에 표시됩니다.</div>
+      <div id="memberProfile" class="panel">팀원 프로필이 여기 표시됩니다.</div>
+      <button type="button" onclick="clearMemberProfile()">팀원 프로필 지우기</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>④ 마스터 데이터</legend>
+      <div id="masters"></div>
+      <button type="button" onclick="loadMasters()">마스터 새로고침</button>
+    </fieldset>
+  </div>
+
+  <div class="col-wide">
+    <fieldset>
+      <legend>⑤ 프로젝트 생성(현재 유저=리더)</legend>
+      <label>제목</label><input id="ptitle" type="text" placeholder="AI 스터디툴 만들기"><br><br>
+      <label>내용</label><textarea id="pcontent" rows="3" placeholder="간단 설명"></textarea><br><br>
+      <label>도메인</label><div id="domBox" class="panel"></div>
+      <label>목적</label><div id="purpBox" class="panel"></div>
+      <label>요구 툴</label><div id="toolBox" class="panel"></div>
+      <label>정원</label>
+      <div class="panel">
+        프론트엔드 <input type="number" id="need_fe" value="1" min="0" style="width:70px">
+        백엔드 <input type="number" id="need_be" value="1" min="0" style="width:70px">
+        디자이너 <input type="number" id="need_des" value="1" min="0" style="width:70px">
+      </div>
+      <button type="button" class="primary" onclick="createProject()">프로젝트 생성</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>⑥ 프로젝트 목록 & 상세</legend>
+      <button type="button" onclick="listProjects()">목록 새로고침</button>
+      <div id="plist" class="panel"></div>
+      <div id="pdetail" class="panel"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>⑦ 신청/수락/상태</legend>
+      <label>프로젝트ID</label><input id="pid" type="text" placeholder="예: 1"><br><br>
+      <label>신청 포지션</label>
+      <select id="applyPos">
+        <option value="4">프론트엔드</option>
+        <option value="3">백엔드</option>
+        <option value="2">디자이너</option>
+      </select><br><br>
+      <button type="button" onclick="apply()">참여 신청</button>
+      <button type="button" onclick="cancelApply()">신청 취소(본인)</button>
+      <button type="button" onclick="listApplicants()">신청자 조회(리더)</button><br><br>
+      <label>대상 유저ID</label><input id="targetUser" type="text" placeholder="예: 2"><br><br>
+      <button type="button" class="primary" onclick="decide('ACCEPT')">수락</button>
+      <button type="button" onclick="decide('REJECT')">거절</button>
+      <button type="button" onclick="closeProject()">마감</button>
+      <button type="button" onclick="reopenProject()">재오픈</button>
+      <button type="button" onclick="leaveProject()">중도 하차(마감 상태)</button>
+      <button type="button" onclick="completeProject()">완료</button>
+      <div id="applicants" class="panel"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>⑧ 평가 → 신뢰지표 반영</legend>
+      <label>프로젝트ID</label><input id="epid" type="text" placeholder="예: 1"><br><br>
+      <label>평가 대상 유저ID</label><input id="ratee" type="text" placeholder="예: 2"><br><br>
+      <label>점수(1~5)</label><input id="score" type="number" min="1" max="5" value="5" style="width:80px"><br><br>
+      <label>코멘트</label><input id="cmt" type="text" placeholder="수고했어!"><br><br>
+      <button id="btnEvaluate" type="button" class="primary">평가 등록</button>
+    </fieldset>
+  </div>
+</div>
+
+<h2>API 응답 로그</h2>
+<pre id="log"></pre>
+
+<script>
+let CURRENT_USER_ID = null;
+
+const $ = s => document.querySelector(s);
+function log(x){ const el=$('#log'); el.textContent=(typeof x==='string'?x:JSON.stringify(x,null,2))+'\n'+el.textContent; }
+
+async function api(a, data){
+  try{
+    const res = await fetch('api.php', {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+      body: new URLSearchParams({a, ...(data||{})})
+    });
+    const text = await res.text(); let json;
+    try{ json = JSON.parse(text); }
+    catch(e){ json = { ok:false, error:'JSON parse fail', status:res.status, statusText:res.statusText, raw:text }; }
+    log(json); return json;
+  }catch(err){
+    const info = { ok:false, error:'fetch failed', detail:String(err) }; log(info); return info;
+  }
+}
+
+async function ping(){ const r = await fetch('api.php?a=ping'); const t = await r.text(); try{ log(JSON.parse(t)); }catch(e){ log({raw:t}); } }
+
+async function refreshState(){
+  const j = await (await fetch('api.php?a=state')).json(); log(j);
+  if(!j.ok) return;
+  CURRENT_USER_ID = j.current_user_id;
+  $('#userList').innerHTML = j.users.map(u=>{
+    const cur = (u.user_id===CURRENT_USER_ID)?' (현재)':'';
+    return `<button type="button" onclick="switchUser(${u.user_id})">${u.user_id}. ${u.nickname}${cur} — ⭐${u.trust_score}(${u.ratings_count})</button>`;
+  }).join(' ');
+  await loadMyProfile(CURRENT_USER_ID);
+}
+async function switchUser(id){ await api('switch_user',{user_id:id}); await refreshState(); }
+
+/* 공용 렌더: targetId */
+async function loadProfileInto(uid, targetId, opts={ withProjects:true }){
+  const res = await fetch('api.php?a=get_profile&user_id='+uid);
+  const j = await res.json(); log(j);
+  const box = document.getElementById(targetId);
+  if(!j.ok){ box.innerHTML = j.error || '오류'; return j; }
+  const u = j.profile;
+  box.innerHTML = `
+    <div style="display:flex; gap:10px; align-items:center;">
+      ${u.profile_image ? `<img src="${u.profile_image}" alt="" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid #ddd" />` : ''}
+      <div>
+        <div>유저#${u.user_id} <b>${u.nickname}</b> — ⭐ ${u.trust_score} (${u.ratings_count})</div>
+        <div class="muted">${u.intro || ''}</div>
+      </div>
+    </div>
+    <div style="margin-top:8px">포지션: ${j.positions.map(p=>`<span class="pill">${p.name}</span>`).join(' ') || '-'}</div>
+    <div>툴: ${j.tools.map(t=>`<span class="pill">${t.kind}:${t.name}</span>`).join(' ') || '-'}</div>
+    <div>뱃지: ${j.badges.map(b=>`<span class="pill">${b.name}</span>`).join(' ') || '-'}</div>
+  `;
+  if (opts.withProjects){
+    const pj = await (await fetch('api.php?a=user_projects&user_id='+uid)).json();
+    log(pj);
+    if (pj.ok) {
+      const activeHtml = pj.active.length
+        ? pj.active.map(p => `<li><button type="button" class="pill" onclick="detail(${p.project_id})">#${p.project_id} ${p.title} — ${p.role}/${p.status}</button></li>`).join('')
+        : '<li>없음</li>';
+      const doneHtml = pj.completed.length
+        ? pj.completed.map(p => `<li><button type="button" class="pill" onclick="detail(${p.project_id})">#${p.project_id} ${p.title} — ${p.role}/${p.status}</button></li>`).join('')
+        : '<li>없음</li>';
+      box.insertAdjacentHTML('beforeend', `
+        <div style="margin-top:8px; padding-top:8px; border-top:1px dashed #ccc">
+          <div><b>참여 중 프로젝트</b></div>
+          <ul style="margin-top:6px">${activeHtml}</ul>
+          <div style="margin-top:10px"><b>완료한 프로젝트</b></div>
+          <ul style="margin-top:6px">${doneHtml}</ul>
+        </div>
+      `);
+    }
+  }
+  return j;
+}
+async function loadMyProfile(uid){
+  const j = await loadProfileInto(uid, 'me', { withProjects:true });
+  if (j && j.ok){
+    const u = j.profile;
+    $('#nick').value  = u.nickname || '';
+    $('#intro').value = u.intro || '';
+    $('#pimg').value  = u.profile_image || '';
+  }
+}
+async function openMemberProfile(uid){ await loadProfileInto(uid, 'memberProfile', { withProjects:true }); }
+function clearMemberProfile(){ $('#memberProfile').innerHTML = '팀원 프로필이 여기 표시됩니다.'; }
+
+/* 마스터 */
+async function loadMasters(){
+  const j = await (await fetch('api.php?a=master')).json(); log(j);
+  if(!j.ok) return;
+  $('#masters').innerHTML =
+    `<div>도메인: ${j.domain.map(d=>`<span class="pill">${d.domain_id}:${d.name}</span>`).join(' ')}</div>`+
+    `<div>목적: ${j.purpose.map(p=>`<span class="pill">${p.purpose_id}:${p.name}</span>`).join(' ')}</div>`+
+    `<div>포지션: ${j.position.map(p=>`<span class="pill">${p.position_id}:${p.name}</span>`).join(' ')}</div>`+
+    `<div>툴: ${j.tool.map(t=>`<span class="pill">${t.kind}:${t.tool_id}:${t.name}</span>`).join(' ')}</div>`;
+  $('#domBox').innerHTML = j.domain.map(d=>`<label><input type="checkbox" name="dom" value="${d.domain_id}"> ${d.name}</label>`).join(' ');
+  $('#purpBox').innerHTML= j.purpose.map(p=>`<label><input type="checkbox" name="purp" value="${p.purpose_id}"> ${p.name}</label>`).join(' ');
+  $('#toolBox').innerHTML= j.tool.map(t=>`<label><input type="checkbox" name="tool" value="${t.tool_id}"> ${t.kind}:${t.name}</label>`).join(' ');
+}
+function values(name){ return Array.from(document.querySelectorAll(`input[name=${name}]:checked`)).map(el=>el.value); }
+
+/* 생성 */
+async function createProject(){
+  const needs = [
+    { position_id:4, needed_count: parseInt($('#need_fe').value||0) },
+    { position_id:3, needed_count: parseInt($('#need_be').value||0) },
+    { position_id:2, needed_count: parseInt($('#need_des').value||0) }
+  ].filter(n=>n.needed_count>0);
+  const j = await api('create_project',{
+    title: $('#ptitle').value, content: $('#pcontent').value,
+    'domain_ids[]': values('dom'), 'purpose_ids[]': values('purp'),
+    'tool_ids[]': values('tool'), needs_json: JSON.stringify(needs)
+  });
+  if(j.ok){ $('#pid').value=j.project_id; $('#epid').value=j.project_id; listProjects(); }
+}
+
+/* 목록 */
+async function listProjects(){
+  const j = await (await fetch('api.php?a=list_projects')).json(); log(j);
+  if(!j.ok) return;
+  $('#plist').innerHTML = `<table>
+    <tr><th>ID</th><th>제목</th><th>리더</th><th>상태</th><th>정원/수락</th><th>보기</th></tr>
+    ${j.projects.map(p=>`<tr>
+      <td>${p.project_id}</td><td>${p.title}</td><td>${p.leader_nickname}</td>
+      <td>${p.status}</td><td>${p.total_accepted}/${p.total_needed}</td>
+      <td><button type="button" onclick="detail(${p.project_id})">상세</button></td>
+    </tr>`).join('')}
+  </table>`;
+}
+
+/* 상세 + 수정 UI + 신청취소/하차 버튼 */
+async function detail(id){
+  const j = await (await fetch('api.php?a=project_detail&project_id='+id)).json(); log(j);
+  if(!j.ok) return;
+  const p=j.project;
+
+  const membersHtml = j.members.map(m => `
+     <button type="button" class="pill" onclick="openMemberProfile(${m.user_id})" title="팀원 프로필 보기">
+       [${m.role}] ${m.nickname}${m.position_name?('('+m.position_name+')'):''} / ${m.status}
+     </button>`).join(' ');
+
+  // 생성 시 입력 내용 표시(내용 content 포함)
+  let base = `
+    <h3>상세 #${p.project_id} — ${p.title}</h3>
+    <div>리더: ${p.leader_nickname} (⭐${p.leader_trust}) / 상태: ${p.status}</div>
+    <div><b>내용</b>: ${p.content ? p.content.replaceAll('<','&lt;') : '-'}</div>
+    <div>도메인: ${j.domains.map(d=>d.name).join(', ')||'-'}</div>
+    <div>목적: ${j.purposes.map(x=>x.name).join(', ')||'-'}</div>
+    <div>툴: ${j.tools.map(t=>t.kind+':'+t.name).join(', ')||'-'}</div>
+    <div>정원: ${j.needs.map(n=>`${n.position} ${n.accepted_count}/${n.needed_count}`).join(' / ')}</div>
+    <div>멤버: ${membersHtml}</div>
+  `;
+
+  // 수정 폼(리더 & 미완료) — 제목/내용만 우선, 필요시 확장 가능
+  if (j.viewer && j.viewer.can_edit){
+    base += `
+      <hr>
+      <div><b>프로젝트 수정 (리더 전용)</b></div>
+      <label>제목</label><input id="edit_title" type="text" value="${(p.title||'').replaceAll('"','&quot;')}"><br><br>
+      <label>내용</label><textarea id="edit_content" rows="3">${(p.content||'').replaceAll('<','&lt;')}</textarea><br><br>
+      <button type="button" class="primary" onclick="updateProject(${p.project_id})">수정 저장</button>
+    `;
+  }
+
+  // 신청 취소 / 중도 하차 가시성 안내
+  if (j.viewer && !j.viewer.is_leader){
+    base += `<div style="margin-top:10px">내 상태: <b>${j.viewer.my_status||'-'}</b></div>`;
+    if (j.viewer.my_status==='APPLIED'){
+      base += `<button type="button" onclick="cancelApply(${p.project_id})">내 신청 취소</button>`;
+    }
+    if (p.status==='CLOSED' && j.viewer.my_status==='ACCEPTED'){
+      base += `<button type="button" onclick="leaveProject(${p.project_id})">중도 하차</button>`;
+    }
+  }
+
+  $('#pdetail').innerHTML = base;
+  $('#pid').value = id; $('#epid').value = id;
+}
+
+/* 수정 저장(리더 전용) */
+async function updateProject(pid){
+  const title = (document.getElementById('edit_title')?.value||'').trim();
+  const content = (document.getElementById('edit_content')?.value||'').trim();
+  const j = await api('update_project',{ project_id: pid, title, content });
+  if (j.ok) detail(pid);
+}
+
+/* 신청/취소/하차/상태 변경 */
+async function apply(){ await api('apply_project',{ project_id: $('#pid').value, position_id: $('#applyPos').value }); }
+async function cancelApply(pidOpt){
+  const pid = pidOpt || $('#pid').value;
+  const j = await api('cancel_apply',{ project_id: pid });
+  if (j.ok) detail(pid);
+}
+async function leaveProject(pidOpt){
+  const pid = pidOpt || $('#pid').value;
+  const j = await api('leave_project',{ project_id: pid });
+  if (j.ok) detail(pid);
+}
+async function listApplicants(){ const j=await (await fetch('api.php?a=list_applicants&project_id='+$('#pid').value)).json(); log(j); $('#applicants').innerHTML=j.ok? j.applicants.map(a=>`${a.user_id}:${a.nickname} / ${a.position_name} / ${a.status}`).join('<br>') : (j.error||''); }
+async function decide(dec){ const j=await api('decide',{ project_id: $('#pid').value, user_id: $('#targetUser').value, decision: dec }); if(j.ok) detail($('#pid').value); }
+async function closeProject(){ const j=await api('close_project',{project_id: $('#pid').value}); if(j.ok) detail($('#pid').value); }
+async function reopenProject(){ const j=await api('reopen_project',{project_id: $('#pid').value}); if(j.ok) detail($('#pid').value); }
+async function completeProject(){ const j=await api('complete_project',{project_id: $('#pid').value}); if(j.ok) detail($('#pid').value); }
+
+/* 평가 */
+function getVal(id){ const el=document.getElementById(id); if(!el) throw new Error(`#${id} 없음`); return (el.value||'').trim(); }
+async function evaluate(){
+  try{
+    log('EVAL_CLICK');
+    const epid  = getVal('epid');
+    const ratee = getVal('ratee');
+    const score = getVal('score');
+    const cmt   = (document.getElementById('cmt')?.value || '').trim();
+    if (!epid)  return log({ok:false,error:'프로젝트ID가 비었습니다.'});
+    if (!ratee) return log({ok:false,error:'평가 대상 유저ID가 비었습니다.'});
+    if (!score) return log({ok:false,error:'점수가 비었습니다.'});
+    const j = await api('evaluate',{ project_id: epid, ratee_user_id: ratee, score, comment: cmt });
+    if (j.ok) { log({ok:true,message:'평가 등록 완료', trust:j.new_trust}); refreshState(); }
+  }catch(err){ log({ok:false,error:'evaluate() exception', detail:String(err)}); }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('btnEvaluate');
+  if (btn) btn.addEventListener('click', (e) => { e.preventDefault(); evaluate(); });
+});
+
+/* 초기 구동 */
+refreshState().then(loadMasters).then(listProjects);
+
+/* 전역 로거 */
+window.addEventListener('error', (e) => { log({ok:false,error:'window.error',message:String(e.message||e.error),file:e.filename,line:e.lineno,col:e.colno}); });
+window.addEventListener('unhandledrejection', (e) => { log({ok:false,error:'unhandledrejection',reason:String(e.reason)}); });
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+# ==========================
+# 🧩 SideProject MVP .gitignore
+# ==========================
+
+# OS 관련
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / 편집기 설정
+.vscode/
+.idea/
+*.code-workspace
+
+# PHP / 서버 환경
+/vendor/
+composer.lock
+composer.phar
+.env
+.env.local
+.env.production
+.env.development
+
+# 로그 / 캐시 / 세션
+*.log
+*.cache
+*.session
+*.tmp
+*.bak
+
+# XAMPP / 로컬 관련
+/xampp/
+/htdocs/test/
+/htdocs/phpmyadmin/
+/xamppfiles/
+/xampp-control.ini
+
+# DB 덤프 (원하면 일부만 커밋)
+db/dump_all.sql
+# ⚠️ schema.sql / seed.sql은 버전 관리해야 하므로 제외하지 말기!
+
+# Node (혹시 프론트 빌드 추가 시)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 빌드 산출물
+/dist/
+/build/
+/public/assets/
+/public/uploads/
+/uploads/
+
+# OS별 휴지통
+$RECYCLE.BIN/
+*.lnk
+ehthumbs.db
+
+# 기타 개인 환경 설정
+config.local.php
+.env.local
