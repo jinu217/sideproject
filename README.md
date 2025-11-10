@@ -79,18 +79,18 @@ http://localhost/sideproject/index.html
 
 ## 🧩 5. 폴더 구조
 
-sideproject/
-│
-├── db/
-│ ├── schema.sql # 테이블 정의
-│ ├── seed.sql # 초기 데이터
-│
-├── api.php # 기능별 API (백엔드)
-├── config.php # DB 연결 설정
-├── index.html # 메인 화면 (UI)
-├── .gitignore # 불필요 파일 제외
-├── README.md # 설치 및 실행 가이드
-└── LICENSE # 오픈소스 라이선스
+sideproject/   
+│   
+├── db/   
+│ ├── schema.sql # 테이블 정의   
+│ ├── seed.sql # 초기 데이터   
+│   
+├── api.php # 기능별 API (백엔드)   
+├── config.php # DB 연결 설정   
+├── index.html # 메인 화면 (UI)   
+├── .gitignore # 불필요 파일 제외   
+├── README.md # 설치 및 실행 가이드   
+└── LICENSE # 오픈소스 라이선스   
 
 ---
 
