@@ -1,146 +1,147 @@
-# 🧩 SideProject Platform MVP
-> 협업 완주율을 높이기 위한 사이드프로젝트 매칭 플랫폼 (PHP + MySQL + HTML)
+###📘 SideProject Platform (Tishoo) – Local Setup Guide
 
----
+팀원이 그대로 따라 하면 100% 실행되게 최대한 쉽게 작성했어!
 
-## 🚀 프로젝트 개요
-이 프로젝트는 **XAMPP 환경**에서 동작하는 PHP 기반 웹 애플리케이션입니다.  
-- 사용자는 **프로필 설정 / 프로젝트 생성 / 참여 / 평가** 기능을 사용할 수 있습니다.  
-- UI는 HTML로 구성되어 있으며, 데이터는 MySQL DB에 저장됩니다.  
+##⚙️ 1. 개발 환경 세팅
+#✔️ 1-1. XAMPP 설치
 
----
+https://www.apachefriends.org/download.html
 
-## ⚙️ 1. 개발 환경 세팅
+PHP 8.x 포함 버전 설치
 
-### ✅ 1) 준비물 설치
-1. **XAMPP 설치**
-   - 다운로드: [https://www.apachefriends.org](https://www.apachefriends.org)
-   - 설치 후 **Apache**와 **MySQL**을 켜주세요.
+XAMPP 실행 → Apache, MySQL 둘 다 Start
 
-2. **GitHub Desktop 설치**
-   - 다운로드: [https://desktop.github.com](https://desktop.github.com)
-   - 설치 후 GitHub 계정으로 로그인합니다.
+##📁 2. 프로젝트 설치 위치(중요)
 
----
+프로젝트는 다음 위치에 넣어야 정상 작동함:
 
-## 📦 2. 프로젝트 가져오기 (GitHub Desktop 사용)
+C:\xampp\htdocs\sideproject\3sideproject
 
-### ✅ 1) GitHub Desktop 실행  
-- 상단 메뉴에서 → **File → Clone Repository…** 클릭  
 
-### ✅ 2) Repository 탭에서  
-- 검색창에 `jinu217/sideproject` 입력  
-- 또는 URL 직접 입력  
-https://github.com/jinu217/sideproject.git
+폴더 구조 예:
 
-### ✅ 3) Local Path 선택  
-- 경로를 아래처럼 지정해 주세요 👇  
-C:\xampp\htdocs\sideproject
+htdocs
+ └─ sideproject
+     └─ 3sideproject
+         ├─ 06_user_profile.php
+         ├─ connect.php
+         ├─ view/
+         ├─ img/
+         ├─ css/
+         └─ (기타 파일들)
 
-- **[Clone]** 버튼 클릭  
+##🌐 3. 웹사이트 접속 주소
 
-### ✅ 4) 완료 후 GitHub Desktop 확인  
-왼쪽 상단에 `sideproject` 이름이 보이면 클론 성공입니다.
-
----
-
-## 🧱 3. 데이터베이스 설정 (phpMyAdmin 사용)
-
-### ✅ 1) phpMyAdmin 접속  
 브라우저 주소창에 입력:
-http://localhost/phpmyadmin
 
-### ✅ 2) 새 데이터베이스 생성  
-1. 좌측 상단 “**새로 만들기**” 클릭  
-2. 이름 입력: `sideproject`  
-3. 문자 집합: `utf8mb4_general_ci` 선택 → **생성**
+http://localhost/sideproject/3sideproject/
 
-### ✅ 3) SQL 파일 적용  
-좌측에서 `sideproject` 데이터베이스 클릭 → 상단 “**가져오기(Import)**” 탭 클릭  
 
-1. **파일 선택** →  
-   `C:\xampp\htdocs\sideproject\db\schema.sql` 선택 → **실행**  
-2. 다시 “가져오기” 탭 클릭 →  
-   `C:\xampp\htdocs\sideproject\db\seed.sql` 선택 → **실행**
+특정 유저 프로필 케이스:
 
-✅ “완료되었습니다” 메시지가 뜨면 DB 설정 성공!
+http://localhost/sideproject/3sideproject/06_user_profile.php?user_id=1
 
----
+##🗄️ 4. DB 설치 (tishoo.sql import)
+#✔️ 4-1. phpMyAdmin 접속
 
-## 💡 4. 실행 방법
+브라우저에서:
 
-1. XAMPP에서 **Apache**와 **MySQL**이 모두 켜져 있는지 확인  
-2. 브라우저 주소창에 입력:
-http://localhost/sideproject/index.html
+http://localhost/phpmyadmin/
 
-3. 메인 페이지가 열리면 성공 🎉  
+#✔️ 4-2. DB 만들기
 
----
+New → Database name: tishoo
 
-## 🧩 5. 폴더 구조
+Collation: utf8mb4_general_ci
 
-sideproject/   
-│   
-├── db/   
-│ ├── schema.sql # 테이블 정의   
-│ ├── seed.sql # 초기 데이터   
-│   
-├── api.php # 기능별 API (백엔드)   
-├── config.php # DB 연결 설정   
-├── index.html # 메인 화면 (UI)   
-├── .gitignore # 불필요 파일 제외   
-├── README.md # 설치 및 실행 가이드   
-└── LICENSE # 오픈소스 라이선스   
+Create
 
----
+#✔️ 4-3. tishoo.sql import
 
-## 🔄 6. 깃허브 협업 방법 (GitHub Desktop 기준)
+상단 Import 클릭
 
-### ✅ 변경사항 업로드 (Push)
-1. 수정이 끝나면 GitHub Desktop으로 이동  
-2. 왼쪽에 변경된 파일이 보임  
-3. 아래 입력란에 메시지를 적기:
-feat: update project creation UI
+tishoo.sql 선택
 
-4. **[Commit to main]** 클릭  
-5. 오른쪽 위 **[Push origin]** 클릭 → 깃허브에 업로드 완료 🎉
+Go 실행
 
----
+👉 모든 테이블(users, projects, peer_reviews 등)이 자동 생성됨.
 
-### ✅ 최신 코드 받아오기 (Pull)
-1. 팀원이 업데이트했다면  
-2. GitHub Desktop 상단에서 **[Fetch origin] → [Pull origin]** 클릭  
-3. 자동으로 최신 버전 동기화됩니다.
+##🔌 5. connect.php 설정
 
----
+3sideproject/connect.php 파일 확인:
 
-## 🧠 7. 문제 해결 가이드
+<?php
+$server   = "localhost";
+$user     = "root";
+$password = "";
+$dbname   = "tishoo";
 
-| 문제 | 원인 | 해결 방법 |
-|------|------|-----------|
-| `http://localhost/sideproject` 접속 안 됨 | Apache가 꺼져 있음 | XAMPP에서 Apache “Start” |
-| DB 연결 에러 | DB 미생성 또는 schema.sql 미적용 | phpMyAdmin에서 다시 Import |
-| GitHub push 안 됨 | Git 연결 안 됨 | 메뉴 → Repository → Repository Settings → Remote 확인 |
-| 한글 깨짐 | 문자셋 문제 | DB 문자셋을 `utf8mb4_general_ci`로 변경 |
+$conn = new mysqli($server, $user, $password, $dbname);
 
----
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
 
-## 🪪 License
-MIT License © 2025 Team 3조
+##🖥️ 6. GitHub Desktop 사용법
 
----
+팀원들이 로컬에서 개발하려면 GitHub Desktop이 훨씬 쉬움.
 
-## 🧩 보너스: DB를 터미널에서 직접 세팅하고 싶을 때
+#✔️ 6-1. GitHub Desktop 다운로드
 
-1. **CMD(명령 프롬프트) 열기**  
-2. 아래 명령어 순서대로 입력:
-```bash
-mysql -u root
-CREATE DATABASE sideproject CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE sideproject;
-SOURCE C:/xampp/htdocs/sideproject/db/schema.sql;
-SOURCE C:/xampp/htdocs/sideproject/db/seed.sql;
-EXIT;
-브라우저에서 실행:
+https://desktop.github.com/
 
-http://localhost/sideproject
+#✔️ 6-2. Clone repository
+
+GitHub Desktop 실행
+
+File → Clone Repository
+
+URL 탭에서 저장소 주소 입력
+
+Local Path를 정확히 이렇게 설정:
+
+C:\xampp\htdocs\sideproject\3sideproject
+
+
+👉 Clone 후 즉시 Apache가 해당 폴더를 읽어 바로 작동함.
+
+##🔄 7. 변경사항 Pull / Push
+✔️ 최신 코드 받기(Pull)
+
+GitHub Desktop → Pull origin
+
+✔️ 변경 반영(Push)
+
+변경 확인 → Commit message 작성
+
+Commit to main (또는 브랜치)
+
+Push origin
+
+##👥 8. 팀원 개발 프로세스 추천
+
+항상 Pull → 작업 → Commit → Push
+
+충돌 방지를 위해 기능별 브랜치 사용:
+
+feature/review-ui
+feature/project-tab
+bugfix/db-error
+
+
+완성 후 main 브랜치로 PR(Merge Request) 진행
+
+##🎉 9. 프로젝트 실행 확인 체크리스트
+
+ XAMPP Apache / MySQL 실행됨
+
+ tishoo DB import 완료
+
+ connect.php DB 정보 세팅됨
+
+ 경로가 htdocs/sideproject/3sideproject
+
+ 브라우저에서 정상 접속됨
+
+ 탭 전환(profile/project/portfolio/reviews) 정상 작동
