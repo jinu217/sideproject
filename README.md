@@ -1,6 +1,6 @@
 📘 ## SideProject Platform (Tishoo) – Local Setup Guide
 
-이 프로젝트는 XAMPP 기반 PHP + MySQL 환경에서 실행됩니다.
+## 이 프로젝트는 XAMPP 기반 PHP + MySQL 환경에서 실행됩니다.
 아래 가이드대로 진행하면 팀원 모두 동일한 환경을 구성할 수 있습니다.
 
 ⚙️ 1. 개발 환경 준비
