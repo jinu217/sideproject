@@ -38,7 +38,7 @@ htdocs
 
 사이트 홈:  
 
-http://localhost/tishoo/page/00_view.php  
+http://localhost/tishoo/page/00_home.php  
 
 
 특정 유저 프로필 페이지:  
