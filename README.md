@@ -43,7 +43,7 @@ http://localhost/tishoo/page/00_home.php
 
 특정 유저 프로필 페이지:  
 
-http://localhost/tishoo/page/06_user_profile.php?user_id=1  
+http://localhost/tishoo/page/06_user_profile.php?user=1  
 
 ## 🗄️ 4. 데이터베이스 Import (tishoo.sql)  
 ### ✔️ 4-1. phpMyAdmin 접속  
