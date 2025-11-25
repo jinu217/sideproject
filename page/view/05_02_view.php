@@ -82,4 +82,4 @@
 					window.location.href = "05_03_project_finish.php";
 				});
 			}				
-	</script>
+	</script> 
