@@ -1,0 +1,149 @@
+/* 루트 스코프 */
+.profile-tab-project {
+    width: 100%;
+    position: relative;
+    font-family: Pretendard;
+    text-align: left;
+    color: #000;
+}
+
+/* 큰 컨테이너 */
+.profile-tab-project .frame-parent {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: left;
+    font-size: 1.125rem;
+    color: #000;
+}
+
+/* 제목 영역 */
+.profile-tab-project .parent {
+    position: relative;
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+    gap: 1.25rem;
+}
+
+.profile-tab-project .div {
+    letter-spacing: -0.03em;
+    line-height: 1.125rem;
+    font-weight: 600;
+}
+
+.profile-tab-project .iconchevron-right {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* 카드 리스트 */
+.profile-tab-project .card-parent {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3.375rem 1rem 0rem 1rem;
+    box-sizing: border-box;
+    gap: 1.25rem;
+    font-size: 0.688rem;
+}
+
+/* 각 카드 */
+.profile-tab-project .card {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+}
+
+/* 썸네일 */
+.profile-tab-project .thumbnail-icon {
+    width: 100%;
+    height: 6.813rem;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* 카드 내부 텍스트 */
+.profile-tab-project .contents {
+    width: 100%;
+    padding: 0.875rem 1rem 1rem;
+}
+
+.profile-tab-project .contents2 {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-tab-project .contents3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.profile-tab-project .information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.profile-tab-project .group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.312rem;
+}
+
+.profile-tab-project .div2 {
+    letter-spacing: -0.03em;
+    line-height: 130%;
+}
+
+.profile-tab-project .ai-ux-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    font-size: 1rem;
+    color: #0f0f0f;
+}
+
+.profile-tab-project .ai {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+}
+
+.profile-tab-project .div3 {
+    font-size: 0.75rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    color: #737373;
+}
+
+.profile-tab-project .uiux {
+    font-size: 0.813rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 600;
+    color: #3385ff;
+}
+
+/* 카드 보더 */
+.profile-tab-project .border {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(112, 115, 124, 0.16);
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}

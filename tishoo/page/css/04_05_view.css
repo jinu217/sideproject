@@ -1,0 +1,216 @@
+.div {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-end;
+  	text-align: center;
+  	font-size: 1rem;
+  	color: #000;
+  	font-family: Pretendard;
+}
+.div2 {
+  	width: 23.438rem;
+  	height: 4.25rem;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	padding: 0.625rem 1rem;
+  	gap: 2.562rem;
+  	font-size: 1.125rem;
+}
+.arrow-back-ios-new-icon {
+  	width: 1.5rem;
+  	position: relative;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.parent {
+  	width: 13.319rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.375rem;
+}
+.div3 {
+  	align-self: stretch;
+  	height: 1.688rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 140%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-shrink: 0;
+}
+.div4 {
+  	align-self: stretch;
+  	height: 0.888rem;
+  	position: relative;
+  	font-size: 0.875rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	color: #737373;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-shrink: 0;
+}
+.div5 {
+  	align-self: stretch;
+  	background-color: #fff;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 1.25rem 0rem 2.5rem;
+  	text-align: left;
+}
+.group {
+  	width: 20.25rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 1.375rem;
+}
+.div6 {
+  	align-self: stretch;
+  	height: 1.688rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.frame-parent {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.5rem;
+  	color: #474747;
+}
+
+/* 원래 카드 스타일 유지 */
+.container {
+  	align-self: stretch;
+  	height: 3.875rem;
+  	border-radius: 12px;
+  	background-color: #d9d9d9;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0.5rem 1.125rem 0.187rem;
+  	box-sizing: border-box;
+}
+.parent2 {
+  	align-self: stretch;
+  	height: 3.875rem;
+  	border-radius: 12px;
+  	background-color: #d9d9d9;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0.5rem 1.125rem 0.187rem;
+  	box-sizing: border-box;
+  	cursor: pointer;
+}
+.div7 {
+  	align-self: stretch;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+}
+.div8 {
+  	align-self: stretch;
+  	height: 1.119rem;
+  	position: relative;
+  	font-size: 0.813rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	color: #737373;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+
+/* 🔹 수익 분배 옵션 공통(클릭 가능) */
+.dist-option {
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ✅ 옵션 선택(active) 시 – 네가 보여준 파란 스타일 적용 */
+.dist-option.active {
+  	background-color: #1e78ff;
+  	color: #fff;
+}
+.dist-option.active .div7,
+.dist-option.active .div8 {
+  	color: #fff;
+}
+
+.child {
+  	width: 15.15rem;
+  	height: 15.45rem;
+  	position: relative;
+  	background-color: #fff;
+}
+
+/* 하단 다음 버튼 영역 */
+.div15 {
+  	width: 23.438rem;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 1.812rem 1.625rem;
+  	box-sizing: border-box;
+  	color: #fff;
+}
+
+/* 기본 – 비활성 (연한 파랑) */
+.div16 {
+  	align-self: stretch;
+  	height: 3.75rem;
+  	position: relative;
+  	border-radius: 40px;
+  	background-color: #9ec5ff;
+}
+.wrapper {
+  	position: absolute;
+  	top: 0.5rem;
+  	left: 9.156rem;
+  	width: 1.938rem;
+  	height: 2.75rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.625rem;
+  	box-sizing: border-box;
+  	flex-shrink: 0;
+}
+.div17 {
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	flex-shrink: 0;
+}
+
+/* ✅ 옵션 1개라도 선택 시 다음 버튼 활성화 */
+#nextButton.next-active {
+  	background-color: #1e78ff;
+  	cursor: pointer;
+}
+#nextButton.next-active .div17 {
+  	color: #fff;
+}

@@ -1,0 +1,159 @@
+.div {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem 0rem;
+    box-sizing: border-box;
+    gap: 3.125rem;
+    text-align: right;
+    font-size: 1.25rem;
+    color: #333;
+    font-family: Pretendard;
+}
+
+/* 상단 타이틀 영역 */
+.inner {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+.arrow-back-ios-new-parent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    max-width: 100%;
+}
+
+.arrow-back-ios-new-icon {  
+    position: relative;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.arrow-back-ios-icon {
+    width: 1.25rem;
+    position: relative;
+    max-height: 100%;
+}
+
+.frame-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 0.125rem;
+}
+
+.div2 {
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 140%;
+    font-weight: 600;
+}
+
+/* 본문 */
+.frame-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem 1rem;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    color: #0f172a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+    color: #333;
+}
+
+.div3 {
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.813rem;
+    color: #333;
+}
+
+.div4 {
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+}
+
+/* 팀원 2명씩 출력하는 행 */
+.frame-group {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+/* 개별 팀원 카드 wrapper */
+.frame-container,
+.frame-wrapper2 {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 카드 자체 */
+.frame-div {
+    flex: 1;
+    border-radius: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.875rem;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.frame-div:hover {
+    background-color: #eef2f7;
+    transform: translateY(-2px);
+}
+
+/* 카드 내부 */
+.frame-parent2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.437rem;
+}
+
+/* 프로필 이미지 */
+.frame-child {
+    width: 3.813rem;
+    height: 3.813rem;
+    position: relative;
+    border-radius: 99px;
+    object-fit: cover;
+}

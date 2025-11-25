@@ -1,0 +1,74 @@
+.detail-card {
+        width: 100%;
+        max-width: 21.563rem; /* 기존 카드 폭과 비슷하게 맞춤 */
+        position: relative;
+        border-radius: 12px;
+        border: 1px solid rgba(112, 115, 124, 0.16);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.75rem 0.875rem;
+        gap: 1.187rem;
+        text-align: left;
+        font-size: 0.75rem;
+        color: #0f0f0f;
+        font-family: Pretendard;
+    }
+
+    .detail-main-text {
+        width: 18.531rem;
+        height: 4.163rem;
+        position: relative;
+        font-size: 0.875rem;
+        letter-spacing: -0.03em;
+        line-height: 150%;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .detail-uxui-container {
+        width: 19.4rem;
+        height: 4.444rem;
+        position: relative;
+        letter-spacing: -0.03em;
+        line-height: 150%;
+        font-weight: 500;
+        color: #737373;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .detail-uxui {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        padding-left: 1.333rem;
+    }
+
+    .detail-uxui-item {
+        margin-bottom: 0.25rem;
+    }
+
+    .detail-wanted-text {
+        width: 18.531rem;
+        height: 3.375rem;
+        position: relative;
+        letter-spacing: -0.03em;
+        line-height: 150%;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .detail-wanted-txt {
+        width: 100%;
+    }
+
+    .detail-wanted-sub {
+        color: #737373;
+    }

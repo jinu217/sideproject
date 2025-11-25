@@ -1,0 +1,116 @@
+/* 05_00_view.css : 프로젝트 정리 모달 전용 스타일 */
+
+/* iframe 안에서 중앙 정렬용 루트 */
+.notification-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;   /* 세로 가운데 */
+  justify-content: center; /* 가로 가운데 */
+  background: transparent;
+}
+
+/* 실제 카드 부분 */
+.notification-group-parent {
+  width: 19rem;
+  height: 25rem;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow:
+    0px 0px 2px rgba(0, 0, 0, 0.08),
+    0px 8px 16px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: 0.325rem;
+  padding-left: 1rem; 
+  padding-right: 1rem;
+  gap: 2.5rem;
+}
+
+/* 상단 일러스트 영역 */
+.notification-group-container {
+  width: 7.375rem;
+  height: 5.713rem;
+  position: relative;
+}
+
+.notification-vector-parent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+}
+/* 텍스트 영역 */
+.notification-preview-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.notification-preview {
+  position: relative;
+  letter-spacing: -0.03em;
+  line-height: 140%;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.notification-preview2 {
+  align-self: stretch;
+  position: relative;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  line-height: 1.35rem;
+  font-weight: 500;
+  color: #475569;
+  text-align: center;
+}
+
+/* 버튼 영역 */
+.notification-buttons-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: #475569;
+  font-family: "Spoqa Han Sans Neo", Pretendard, -apple-system,
+               BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+}
+
+.notification-buttons,
+.notification-buttons2 {
+  align-self: stretch;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.notification-buttons {
+  background-color: #e2e8f0;
+}
+
+.notification-buttons2 {
+  background-color: #1e78ff;
+  color: #fff;
+}
+
+.notification-button {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 1.25rem;
+}

@@ -1,0 +1,410 @@
+.profile-tab-profile .frame-parent {
+  	width: 100%;
+  	position: relative;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	isolation: isolate;
+  	gap: 3.125rem;
+  	text-align: left;
+  	font-size: 1.063rem;
+  	color: #000;
+  	font-family: Pretendard;
+}
+.profile-tab-profile .parent {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1rem;
+  	gap: 1rem;
+  	z-index: 0;
+}
+.profile-tab-profile .div {
+  	width: 1.981rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 140%;
+  	font-weight: 600;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .uiux {
+  	width: 23.431rem;
+  	height: 2.25rem;
+  	position: relative;
+  	font-size: 0.813rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .frame-group {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1rem;
+  	gap: 1.25rem;
+  	z-index: 1;
+}
+.profile-tab-profile .group {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 1.25rem;
+}
+.profile-tab-profile .div2 {
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 140%;
+  	font-weight: 600;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .actions-parent {
+  	display: none;
+  	align-items: center;
+  	gap: 0.25rem;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .actions {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+.profile-tab-profile .buttontextassistive {
+  	height: 1.75rem;
+  	width: 3.313rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.25rem 0rem;
+  	box-sizing: border-box;
+}
+.profile-tab-profile .iconchevron-right {
+  	height: 1.25rem;
+  	width: 1.25rem;
+  	position: relative;
+  	overflow: hidden;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .frame-container {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	gap: 0.625rem;
+  	font-size: 0.688rem;
+  	font-family: 'Pretendard Variable';
+}
+.profile-tab-profile .frame-wrapper {
+  	height: 4.938rem;
+  	width: 6.313rem;
+  	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+  	border-radius: 12px;
+  	background-color: #fff;
+  	border: 1px solid #e5e5e5;
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.625rem 1rem;
+}
+.profile-tab-profile .group-parent {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 0.625rem;
+}
+.profile-tab-profile .group-container {
+  	width: 1.188rem;
+  	height: 0.938rem;
+  	position: relative;
+}
+.profile-tab-profile .vector-parent {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+}
+.profile-tab-profile .group-child {
+  	position: absolute;
+  	height: 22.67%;
+  	width: 50%;
+  	top: 9.48%;
+  	right: 50%;
+  	bottom: 67.85%;
+  	left: 0%;
+  	border-radius: 11.63px;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.profile-tab-profile .group-item {
+  	position: absolute;
+  	height: 27.33%;
+  	width: 50%;
+  	top: 0%;
+  	right: 0.07%;
+  	bottom: 72.67%;
+  	left: 49.93%;
+  	border-radius: 11.63px;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.profile-tab-profile .subtract-icon {
+  	position: absolute;
+  	height: 71.33%;
+  	width: 90.53%;
+  	top: 28.27%;
+  	right: 3.35%;
+  	bottom: 0.4%;
+  	left: 6.13%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.profile-tab-profile .group-icon {
+  	position: absolute;
+  	height: 48.67%;
+  	width: 22.11%;
+  	top: 33.17%;
+  	right: 56.42%;
+  	bottom: 18.16%;
+  	left: 21.47%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.profile-tab-profile .group2 {
+  	position: absolute;
+  	height: 48.67%;
+  	width: 22.11%;
+  	top: 33.17%;
+  	right: 0.89%;
+  	bottom: 18.17%;
+  	left: 77.01%;
+}
+.profile-tab-profile .vector-icon {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.profile-tab-profile .wrapper {
+  	width: 100%;
+  	display: flex;
+  	align-items: flex-start;
+  	max-width: 14.375rem;
+}
+.profile-tab-profile .div3 {
+  	position: relative;
+  	font-weight: 600;
+}
+.profile-tab-profile .group-parent2 {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 0.25rem;
+}
+.profile-tab-profile .frame-wrapper2 {
+  	align-self: stretch;
+  	width: 5.75rem;
+  	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+  	border-radius: 12px;
+  	background-color: #fff;
+  	border: 1px solid #e5e5e5;
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.625rem 1rem;
+}
+.profile-tab-profile .group-parent3 {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 0.25rem;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .div5 {
+  	position: relative;
+  	font-weight: 500;
+}
+.profile-tab-profile .frame-parent2 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1rem;
+  	gap: 1.25rem;
+  	z-index: 2;
+}
+.profile-tab-profile .group-parent4 {
+  	width: 20.431rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1rem 0rem 1.5rem;
+  	box-sizing: border-box;
+  	gap: 1rem;
+  	font-size: 0.75rem;
+}
+.profile-tab-profile .frame-parent3 {
+  	width: 20.438rem;
+  	height: 3.875rem;
+  	position: relative;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .parent3 {
+  	position: absolute;
+  	top: 0rem;
+  	left: 0rem;
+  	width: 20.431rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.125rem;
+}
+.profile-tab-profile .div7 {
+  	align-self: stretch;
+  	height: 1.156rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.profile-tab-profile .div8 {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 0.625rem;
+  	letter-spacing: -0.03em;
+  	line-height: 130%;
+  	color: #737373;
+}
+.profile-tab-profile .sns {
+  	position: absolute;
+  	top: 2.718rem;
+  	left: 0.005rem;
+  	font-size: 0.625rem;
+  	letter-spacing: -0.03em;
+  	line-height: 130%;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 20.431rem;
+  	height: 1.156rem;
+}
+.profile-tab-profile .frame-parent5 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1rem;
+  	gap: 1.25rem;
+  	z-index: 3;
+}
+.profile-tab-profile .chipxs-parent {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: center;
+  	gap: 0.375rem;
+  	font-size: 0.688rem;
+  	color: #234edf;
+}
+.profile-tab-profile .chipxs {
+  	border-radius: 99px;
+  	background-color: #f0f6fe;
+  	border: 1px solid #d5e1ff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.312rem 0.75rem;
+}
+.profile-tab-profile .text {
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 130%;
+  	font-weight: 500;
+}
+.profile-tab-profile .chipxs2 {
+  	border-radius: 99px;
+  	background-color: #f5f3fe;
+  	border: 1px solid #eee0ff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.312rem 0.75rem;
+  	color: #652ae5;
+}
+.profile-tab-profile .chipxs3 {
+  	border-radius: 99px;
+  	background-color: #fefbec;
+  	border: 1px solid #fff4c3;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.312rem 0.75rem;
+  	color: #ac6653;
+}
+.profile-tab-profile .chipxs4 {
+  	border-radius: 99px;
+  	background-color: #edfbf4;
+  	border: 1px solid #e6fbef;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.312rem 0.75rem;
+  	color: #2d7758;
+}
+.profile-tab-profile .frame-parent6 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1rem;
+  	gap: 1.25rem;
+  	z-index: 4;
+}
+.profile-tab-profile .chipxs-group {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: center;
+  	gap: 0.375rem;
+  	font-size: 0.688rem;
+  	color: #5a5c63;
+}
+.profile-tab-profile .chipxs5 {
+  	border-radius: 99px;
+  	background-color: #f4f4f5;
+  	border: 1px solid #eaebec;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.312rem 0.75rem;
+}
+.profile-tab-profile .frame-item {
+  	width: 0.438rem;
+  	height: 5.313rem;
+  	position: absolute;
+  	margin: 0 !important;
+  	top: 21.829rem;
+  	left: 1.438rem;
+  	z-index: 5;
+}

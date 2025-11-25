@@ -1,0 +1,339 @@
+/* 동료후기 탭 전체 래퍼 */
+.profile-tab-review {
+    width: 100%;
+    position: relative;
+    font-family: Pretendard;
+    text-align: left;
+    color: #000;
+}
+
+/* 최상위 컨테이너 */
+.profile-tab-review .frame-parent {
+    width: 100%;
+    height: 55.119rem;
+    position: relative;
+    text-align: left;
+    font-size: 1.125rem;
+    color: #000;
+}
+
+/* 상단: 전체 후기 제목 + 개수 + 화살표 */
+.profile-tab-review .parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23.438rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    gap: 0.5rem;
+}
+
+.profile-tab-review .div {
+    letter-spacing: -0.03em;
+    line-height: 1.125rem;
+    font-weight: 600;
+}
+
+.profile-tab-review .iconchevron-right {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* 하단 전체 컨텐츠 래퍼 */
+.profile-tab-review .div3 {
+    position: absolute;
+    top: 3.375rem;
+    left: 0;
+    width: 23.438rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    gap: 2.5rem;
+    font-size: 0.625rem;
+    color: #737373;
+}
+
+/* 상단 평점 요약 박스 */
+.profile-tab-review .group {
+    width: 21.438rem;
+    height: 4.5rem;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid rgba(112, 115, 124, 0.16);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2.375rem;
+    gap: 2.937rem;
+    text-align: center;
+    font-size: 1.375rem;
+    color: #000;
+}
+
+/* 왼쪽: 평균 평점 숫자 + 별 */
+.profile-tab-review .div4 {
+    width: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-tab-review .wrapper {
+    width: 3rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    box-sizing: border-box;
+}
+
+.profile-tab-review .div5 {
+    width: 2rem;
+    height: 1.938rem;
+    letter-spacing: -0.03em;
+    line-height: 140%;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.profile-tab-review .star-parent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.062rem;
+}
+
+.profile-tab-review .frame-child {
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 1px;
+}
+
+/* 오른쪽: 만족 비율 */
+.profile-tab-review .div6 {
+    width: 4.688rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-tab-review .inner {
+    width: 100%;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    box-sizing: border-box;
+}
+
+.profile-tab-review .container {
+    height: 1.5rem;
+    width: 3.938rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-tab-review .div7 {
+    height: 1.938rem;
+    width: 3.938rem;
+    letter-spacing: -0.03em;
+    line-height: 140%;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.profile-tab-review .child {
+    width: 2.5rem;
+    height: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.625rem;
+    box-sizing: border-box;
+    font-size: 0.625rem;
+    color: #737373;
+}
+
+.profile-tab-review .frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-tab-review .div8 {
+    width: 5.619rem;
+    height: 1.125rem;
+    letter-spacing: -0.03em;
+    line-height: 130%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 개별 후기 카드 */
+.profile-tab-review .div9 {
+    width: 21.438rem;
+    height: 9.313rem;
+    display: block;
+    position: relative;
+    font-size: 0.75rem;
+    color: #000;
+}
+
+/* 후기 카드 내부 요소 */
+.profile-tab-review .arrow-back-ios-new-icon {
+    position: absolute;
+    top: 7.969rem;
+    left: 19.882rem;
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+}
+
+.profile-tab-review .b {
+    position: absolute;
+    top: 8.225rem;
+    left: 0.875rem;
+    letter-spacing: -0.03em;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    width: 4.219rem;
+    height: 0.488rem;
+}
+
+.profile-tab-review .ai {
+    position: absolute;
+    top: 8.225rem;
+    left: 5.677rem;
+    letter-spacing: -0.03em;
+    line-height: 130%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 12.45rem;
+    height: 0.488rem;
+}
+
+/* 상단 별점 + 점수 */
+.profile-tab-review .star-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.125rem;
+    color: #000;
+}
+
+.profile-tab-review .frame-child3 {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 1px;
+}
+
+.profile-tab-review .div10 {
+    width: 2rem;
+    height: 0.875rem;
+    letter-spacing: -0.03em;
+    line-height: 140%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 더보기 아이콘 */
+.profile-tab-review .more-horiz-icon {
+    position: absolute;
+    top: 0;
+    left: 19.938rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 후기 본문 텍스트 */
+.profile-tab-review .div11 {
+    position: absolute;
+    top: 2.484rem;
+    left: 0;
+    font-size: 0.875rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 21.438rem;
+    height: auto;
+}
+
+/* 하단 이름/날짜 박스 테두리 */
+.profile-tab-review .item {
+    position: absolute;
+    top: 7.453rem;
+    left: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(112, 115, 124, 0.16);
+    box-sizing: border-box;
+    width: 21.438rem;
+    height: 2.031rem;
+}
+
+/* 하단 이름/구분점/날짜 */
+.profile-tab-review .frame-div {
+    position: absolute;
+    top: 4.968rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0;
+    gap: 0.187rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.profile-tab-review .div12 {
+    width: 2.031rem;
+    height: 1.456rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-tab-review .div13 {
+    width: 0.288rem;
+    height: 1.456rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-tab-review .div14 {
+    width: 2.106rem;
+    height: 1.456rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

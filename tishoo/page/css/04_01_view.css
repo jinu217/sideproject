@@ -1,0 +1,213 @@
+.div {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    font-family: Pretendard;
+}
+
+.div2 {
+    width: 23.438rem;
+    height: 4.25rem;
+    border: 1px solid rgba(112, 115, 124, 0.16);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1rem;
+    gap: 2.562rem;
+    font-size: 1.125rem;
+}
+
+.arrow-back-ios-new-icon {
+    width: 1.5rem;
+    position: relative;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.parent {
+    width: 13.319rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+}
+
+.div3 {
+    align-self: stretch;
+    height: 1.688rem;
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 140%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.div4 {
+    align-self: stretch;
+    height: 0.888rem;
+    position: relative;
+    font-size: 0.875rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 600;
+    color: #737373;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.div5 {
+    align-self: stretch;
+    height: 24.188rem;
+    background-color: #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0rem;
+    box-sizing: border-box;
+    text-align: left;
+    color: #474747;
+}
+
+.group {
+    width: 20.25rem;
+    height: 13.688rem;
+    position: relative;
+}
+
+.div6 {
+    position: absolute;
+    top: -1.187rem;
+    left: 0rem;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
+    width: 20.25rem;
+    height: 1.688rem;
+    flex-shrink: 0;
+}
+
+/* 공통 버튼 기본 스타일 (회색) */
+.mvp-wrapper,
+.wrapper,
+.container,
+.frame {
+    position: absolute;
+    left: 0rem;
+    border-radius: 12px;
+    background-color: #d9d9d9;
+    width: 20.25rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.937rem 1.125rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* 각 버튼 위치 */
+.mvp-wrapper { top: 2.188rem; }
+.wrapper     { top: 5.188rem; }
+.container   { top: 8.188rem; }
+.frame       { top: 11.188rem; }
+
+.mvp {
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 600;
+    flex-shrink: 0;
+    color: #000; /* 기본 버튼 텍스트는 검정 */
+}
+
+/* ✅ 선택된 버튼 상태 (네가 말한 파란색 & 흰색 텍스트) */
+.option-btn.option-selected {
+    background-color: #1e78ff;
+}
+
+.option-btn.option-selected .mvp {
+    color: #fff;
+}
+
+/* 하단 여백 영역 */
+.child {
+    width: 15.15rem;
+    height: 14.988rem;
+    position: relative;
+    background-color: #fff;
+}
+
+/* 하단 전체 영역 */
+.div10 {
+    width: 23.438rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.812rem 1.625rem;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* ✅ '다음' 버튼 - 기본(비활성) 상태 */
+.div11 {
+    width: 100%;
+    height: 3.75rem;
+    position: relative;
+    border-radius: 40px;
+    background-color: #9ec5ff;  /* 연한 파랑 */
+    text-align: center;
+    font-size: 1rem;
+    font-family: Pretendard;
+    pointer-events: none;        /* 클릭 안 됨 */
+    transition: background-color 0.2s ease;
+}
+
+/* '다음' 안쪽 텍스트 위치 */
+.frame-div {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.938rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* '다음' 텍스트 스타일 (항상 흰색) */
+.div11 .mvp {
+    letter-spacing: -0.03em;
+    line-height: 150%;
+    font-weight: 600;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+/* ✅ '다음' 버튼 - 활성화 상태 (옵션 중 하나라도 선택되면 이 클래스 추가) */
+.div11.active {
+    background-color: #1e78ff; /* 진한 파랑 */
+    cursor: pointer;
+    pointer-events: auto;      /* 이제 클릭 가능 */
+}

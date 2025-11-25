@@ -1,0 +1,472 @@
+.div {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-end;
+  	text-align: center;
+  	font-size: 1.125rem;
+  	color: #000;
+  	font-family: Pretendard;
+}
+.div2 {
+  	width: 23.438rem;
+  	height: 4.25rem;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	padding: 0.625rem 1rem;
+  	gap: 2.562rem;
+}
+.arrow-back-ios-new-icon {
+  	width: 1.5rem;
+  	position: relative;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.parent {
+  	width: 13.319rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.375rem;
+}
+.div3 {
+  	align-self: stretch;
+  	height: 1.688rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 140%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-shrink: 0;
+}
+.div4 {
+  	align-self: stretch;
+  	height: 0.888rem;
+  	position: relative;
+  	font-size: 0.875rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	color: #737373;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-shrink: 0;
+}
+.div5 {
+  	align-self: stretch;
+  	background-color: #fff;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 1.25rem 0rem 2.5rem;
+  	gap: 1.375rem;
+  	text-align: left;
+  	font-size: 0.813rem;
+  	color: #737373;
+}
+.wrapper {
+  	width: 20.25rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	font-size: 1rem;
+  	color: #000;
+}
+.div6 {
+  	align-self: stretch;
+  	height: 1.688rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.frame-parent {
+  	width: 20.25rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.562rem;
+}
+.frame-wrapper {
+  	display: flex;
+  	align-items: center;
+}
+.group {
+  	width: 4.738rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 0.062rem;
+}
+.div7 {
+  	height: 1.119rem;
+  	width: 4.294rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.div8 {
+  	height: 1.119rem;
+  	width: 0.381rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	color: #ff4242;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.container {
+  	align-self: stretch;
+  	height: 2.563rem;
+  	position: relative;
+  	border-radius: 8px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	font-size: 0.875rem;
+  	color: #b0b0b0;
+}
+.div9 {
+  	position: absolute;
+  	top: 0.779rem;
+  	left: 1.125rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 18rem;
+  	height: 1.006rem;
+}
+.wrapper2 {
+  	width: 4.738rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+.div13 {
+  	height: 1.119rem;
+  	width: 4.588rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.wrapper4 {
+  	align-self: stretch;
+  	height: 11.875rem;
+  	position: relative;
+  	border-radius: 8px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	font-size: 0.875rem;
+  	color: #b0b0b0;
+}
+.parent3 {
+  	width: 4.738rem;
+  	display: flex;
+  	align-items: center;
+}
+.div18 {
+  	height: 1.119rem;
+  	width: 3.738rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.click-to-upload-parent {
+  	align-self: stretch;
+  	height: 11.875rem;
+  	position: relative;
+  	border-radius: 8px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	text-align: center;
+  	font-size: 0.875rem;
+  	color: #b0b0b0;
+}
+.click-to-upload {
+  	position: absolute;
+  	top: 7.203rem;
+  	left: 1.125rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 18rem;
+  	height: 1.006rem;
+}
+.backup-icon {
+  	position: absolute;
+  	top: 4.704rem;
+  	left: 8.625rem;
+  	width: 3rem;
+  	height: 3rem;
+}
+.frame-parent6 {
+  	display: flex;
+  	align-items: center;
+  	gap: 0.937rem;
+  	text-align: center;
+  	font-size: 0.875rem;
+  	color: #b0b0b0;
+}
+.wrapper6 {
+  	height: 1.75rem;
+  	width: 6.125rem;
+  	border-radius: 20px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.75rem 1.375rem;
+}
+.div21 {
+  	height: 1.006rem;
+  	width: 3.988rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-shrink: 0;
+}
+.frame-parent9 {
+  	width: 20.25rem;
+  	height: 3.431rem;
+  	position: relative;
+  	text-align: center;
+  	font-size: 0.875rem;
+  	color: #b0b0b0;
+}
+.frame-wrapper7 {
+  	position: absolute;
+  	top: 0rem;
+  	left: 0rem;
+  	display: flex;
+  	align-items: center;
+  	text-align: left;
+  	font-size: 0.813rem;
+  	color: #737373;
+}
+.frame-wrapper8 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 0rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.wrapper14 {
+  	position: absolute;
+  	top: 0.009rem;
+  	left: 0rem;
+  	border-radius: 20px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.div29 {
+  	position: absolute;
+  	top: 0.373rem;
+  	left: 0.34rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 1.819rem;
+  	height: 1.006rem;
+  	flex-shrink: 0;
+}
+.frame-wrapper9 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 2.938rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.frame-wrapper10 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 5.875rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.frame-wrapper11 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 8.813rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.frame-wrapper12 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 11.75rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.frame-wrapper13 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 14.688rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.frame-wrapper14 {
+  	position: absolute;
+  	top: 1.709rem;
+  	left: 17.625rem;
+  	width: 2.5rem;
+  	height: 1.75rem;
+}
+.parent4 {
+  	width: 4.738rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 0rem;
+}
+.div40 {
+  	height: 1.119rem;
+  	width: 5.963rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.frame-parent13 {
+  	display: flex;
+  	align-items: center;
+  	gap: 0.75rem;
+  	text-align: center;
+  	font-size: 0.875rem;
+  	color: #b0b0b0;
+}
+.wrapper25 {
+  	height: 1.75rem;
+  	width: 9.75rem;
+  	border-radius: 20px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.75rem 1.375rem;
+}
+.div44 {
+  	width: 23.438rem;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 1.812rem 1.625rem;
+  	box-sizing: border-box;
+  	font-size: 1rem;
+  	color: #fff;
+}
+
+/* ✅ 다음 버튼: 기본은 연한 파랑 + 클릭 불가 */
+.div45 {
+  	align-self: stretch;
+  	height: 3.75rem;
+  	position: relative;
+  	border-radius: 40px;
+  	background-color: #9ec5ff;
+  	text-align: center;
+  	font-size: 1rem;
+  	font-family: Pretendard;
+  	pointer-events: none;        /* 클릭 불가 */
+  	cursor: default;
+  	transition: background-color 0.2s ease;
+}
+.wrapper27 {
+  	position: absolute;
+  	top: 0.5rem;
+  	left: 9.156rem;
+  	width: 1.938rem;
+  	height: 2.75rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0.625rem;
+  	box-sizing: border-box;
+  	flex-shrink: 0;
+}
+.div46 {
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 600;
+  	flex-shrink: 0;
+}
+
+/* ✅ 다음 버튼: 활성화되면 진한 파랑 + 클릭 가능 */
+.div45.active {
+  	background-color: #1e78ff;
+  	cursor: pointer;
+  	pointer-events: auto;
+}
+
+/* 클릭 가능한 칩들 공통 */
+.wrapper6,
+.wrapper14,
+.wrapper25 {
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* 기본 텍스트 색 (회색) */
+.frame-parent6 .div21,
+.frame-parent13 .div21,
+.frame-parent9 .div29 {
+    color: #b0b0b0;
+}
+
+/* ✅ 선택된 칩 색상 */
+.wrapper6.active,
+.wrapper25.active,
+.wrapper14.active {
+    background-color: #1e78ff;
+    border-color: #1e78ff;
+}
+
+/* 선택된 칩 내부 텍스트를 흰색으로 */
+.wrapper6.active .div21,
+.wrapper25.active .div21,
+.wrapper14.active .div29 {
+    color: #fff;
+}
