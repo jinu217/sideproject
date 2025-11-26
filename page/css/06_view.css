@@ -205,98 +205,8 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
-}
-
-/* 배지 아이콘 묶음 */
-
-.profile-header-badge-icon {
-    height: 0.938rem;
-    width: 1.188rem;
     position: relative;
 }
-
-.profile-header-badge-shape {
-    position: absolute;
-    inset: 0;
-}
-
-.profile-header-badge-bg1 {
-    position: absolute;
-    height: 22.67%;
-    width: 50%;
-    top: 9.48%;
-    right: 50%;
-    bottom: 67.85%;
-    left: 0;
-    border-radius: 11.63px;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-
-.profile-header-badge-bg2 {
-    position: absolute;
-    height: 27.33%;
-    width: 50%;
-    top: 0;
-    right: 0.07%;
-    bottom: 72.67%;
-    left: 49.93%;
-    border-radius: 11.63px;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-
-.profile-header-badge-bg3 {
-    position: absolute;
-    height: 71.33%;
-    width: 90.53%;
-    top: 28.27%;
-    right: 3.35%;
-    bottom: 0.4%;
-    left: 6.13%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-
-.profile-header-badge-center {
-    position: absolute;
-    height: 48.67%;
-    width: 22.11%;
-    top: 33.17%;
-    right: 56.42%;
-    bottom: 18.16%;
-    left: 21.47%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-
-.profile-header-badge-inner {
-    position: absolute;
-    height: 48.67%;
-    width: 22.11%;
-    top: 33.17%;
-    right: 0.89%;
-    bottom: 18.17%;
-    left: 77.01%;
-}
-
-.profile-header-badge-inner-shape {
-    position: absolute;
-    inset: 0;
-}
-
-.profile-header-badge-inner-icon {
-    position: absolute;
-    inset: 0;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-
 /* 텍스트 + 툴팁 */
 
 .profile-header-score-label {
@@ -312,8 +222,11 @@
 }
 
 .profile-header-tooltip {
-    box-shadow: 0 0 4px rgba(0,0,0,0.12), 2px 6px 12px rgba(0,0,0,0.12);
-    display: flex;
+    position: absolute;          
+    left: 5.2rem;
+    z-index: 10;
+
+    display: none;               
     align-items: center;
     text-align: center;
     color: #fff;
@@ -327,13 +240,15 @@
 }
 
 .profile-header-tooltip-box {
-    border-radius: 4px;
-    background-color: #333;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 169px; 
     padding: 0.375rem 0.5rem;
+    background: #333; 
+    overflow: hidden; 
+    border-radius: 4px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    display: inline-flex;
 }
 
 .profile-header-tooltip-text {
@@ -383,7 +298,7 @@
 }
 
 .profile-header-score-value {
-    width: 1.75rem;
+    font-weight: 600;
     letter-spacing: -0.17px;
     line-height: 1.125rem;
     display: inline-block;

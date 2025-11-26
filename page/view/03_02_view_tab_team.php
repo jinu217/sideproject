@@ -15,7 +15,7 @@
                     <div class="team-tooltip-box">
                         <div class="team-tooltip-text">1명이 부족해요!</div>
                     </div>
-                    <img class="team-tooltip-arrow" alt="">
+                    <img src="../img/ar_left.svg" class="team-tooltip-arrow" alt="">
                 </div>
                 <div class="team-role-count">2/3</div>
             </div>
@@ -379,7 +379,7 @@
                     <div class="team-card-text-block">
                         <div class="team-card-name-row">
                             <div class="team-card-name">박하늘</div>
-                            <img class="team-mentor-badge" alt="">
+                            <img src="../img/mentor.svg" class="team-mentor-badge" alt="">
                         </div>
                         <div class="team-card-skill-row">
                             <b class="team-card-skill">React</b>
@@ -416,7 +416,7 @@
                     <div class="team-card-text-block">
                         <div class="team-card-name-row">
                             <div class="team-card-name">원유정</div>
-                            <img class="team-mentor-badge" alt="">
+                            <img src="../img/mentor.svg" class="team-mentor-badge" alt="">
                         </div>
                         <div class="team-card-skill-row">
                             <div class="team-card-skill">React</div>

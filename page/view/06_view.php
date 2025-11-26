@@ -131,12 +131,12 @@ $gaugePercent = max(0, min(100, $tishooScore));
     <div class="profile-header">
         <div class="profile-header-top">
             <!-- 뒤로가기 아이콘 -->
-            <img class="profile-header-icon" src="img/arrow_left.svg" alt="뒤로가기"
+            <img class="profile-header-icon" src="../img/arrow_left.svg" alt="뒤로가기"
                  onclick="history.back();" style="cursor:pointer;">
             
             <div class="profile-header-share">
-                <img class="profile-header-icon" src="img/share.svg" alt="공유">
-                <img class="profile-header-icon" src="img/settings.svg" alt="설정">
+                <img class="profile-header-icon" src="../img/share.svg" alt="공유">
+                <img class="profile-header-icon" src="../img/settings.svg" alt="설정">
             </div>
         </div>
 
@@ -188,27 +188,15 @@ $gaugePercent = max(0, min(100, $tishooScore));
                     <div class="profile-header-score-row">
                         <div class="profile-header-score-icon-wrap">
                             <!-- 배지 아이콘 (원하면 실제 svg로 교체) -->
-                            <div class="profile-header-badge-icon">
-                                <div class="profile-header-badge-shape">
-                                    <img class="profile-header-badge-bg1" src="img/tishoo_badge_bg1.svg" alt="">
-                                    <img class="profile-header-badge-bg2" src="img/tishoo_badge_bg2.svg" alt="">
-                                    <img class="profile-header-badge-bg3" src="img/tishoo_badge_bg3.svg" alt="">
-                                </div>
-                                <img class="profile-header-badge-center" src="img/tishoo_badge_center.svg" alt="">
-                                <div class="profile-header-badge-inner">
-                                    <div class="profile-header-badge-inner-shape">
-                                        <img class="profile-header-badge-inner-icon" src="img/tishoo_badge_inner.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="../img/tishoo_power.svg" class="profile-header-badge-icon">
 
                             <div class="profile-header-score-label">티슈력</div>
 
                             <!-- i 아이콘 + 툴팁 -->
-                            <img class="profile-header-info-icon" id="tishooInfoBtn" src="img/tishoo_power_i.svg" alt="정보">
+                            <img class="profile-header-info-icon" id="tishooInfoBtn" src="../img/tishoo_power_i.svg" alt="정보">
 
                             <div class="profile-header-tooltip" id="tishooTooltip" style="display:none;">
-                                <img class="profile-header-tooltip-arrow" src="img/tishoo_power_i2.svg" alt="">
+                                <img class="profile-header-tooltip-arrow" src="../img/tishoo_power_i2.svg" alt="">
                                 <div class="profile-header-tooltip-box">
                                     <div class="profile-header-tooltip-text">
                                         프로젝트 평균 완주율을 나타내요
@@ -366,12 +354,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const img = document.createElement("img");
             img.className = "frame-child"; // 기존 스타일 재사용
             const starScore = avg - (i - 1);
-            if (starScore >= 0.75) {
-                img.src = "img/star_on.svg";
-            } else if (starScore >= 0.25) {
-                img.src = "img/star_half.svg";
+            if (starScore >= 1) {
+                img.src = "../img/star2_on.svg";
             } else {
-                img.src = "img/star_off.svg";
+                img.src = "../img/star2_off.svg";
             }
             avgStarsContainer.appendChild(img);
         }

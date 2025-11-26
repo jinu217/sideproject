@@ -58,11 +58,11 @@
             </div>
 
             <div class="frame-group">
-                <img class="frame-child" alt="">
+                <img src="../img/user1.png" class="frame-child" alt="">
                 <div class="owner-symbol-fill-parent">
-                    <img class="owner-symbol-fill" alt="">
+                    <img src="../img/mentor.svg" class="owner-symbol-fill" alt="">
                     <b class="b">김진우</b>
-                    <img class="frame-item" alt="">
+                    <img src="../img/leader.svg" class="frame-item" alt="">
                 </div>
             </div>
 
@@ -152,6 +152,7 @@
     <!-- AD 영역 -->
     <div class="div30">
         <div class="div31">
+            <img src="../img/ad.png">
             <div class="ad-wrapper">
                 <div class="ad">AD</div>
             </div>

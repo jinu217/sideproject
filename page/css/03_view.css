@@ -296,7 +296,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 1.25rem 1.875rem 1rem;
+            padding-top: 1.25rem;
+            padding-bottom: 1rem;
             gap: 0.25rem;
             flex-shrink: 0;
         }
@@ -315,6 +316,7 @@
             letter-spacing: -0.03em;
             line-height: 140%;
             font-weight: 600;
+            font-family: Pretendard;
             color: #0f172a;
             flex-shrink: 0;
         }
@@ -362,10 +364,10 @@
         }
         .divider3 {
             align-self: stretch;
-            height: 18.938rem;
+            height: 0.1rem;
             position: relative;
             background-color: rgba(112, 115, 124, 0.08);
-            transform: rotate(90deg);
+            transform: rotate(0deg);
         }
         .parent5 {
             align-self: stretch;
@@ -422,10 +424,10 @@
         }
         .divider4 {
             align-self: stretch;
-            height: 18.938rem;
+            height: 0.1rem;
             position: relative;
             background-color: rgba(112, 115, 124, 0.22);
-            transform: rotate(90deg);
+            transform: rotate(0deg);
         }
         .parent11 {
             align-self: stretch;
@@ -501,7 +503,6 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 3.5rem 1.875rem;
             box-sizing: border-box;
             position: relative;
             isolation: isolate;

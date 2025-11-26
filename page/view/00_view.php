@@ -346,7 +346,7 @@ function setupMentorTabs() {
             <div class="frame-parent7">
               <div class="parent2">
                 <div class="div17">${mentor.name}</div>
-                <img class="frame-item" alt="">
+                <img src="../img/mentor.svg" class="frame-item" alt="">
               </div>
               <div class="vs-code-parent">
                 ${skillsHTML}
@@ -357,6 +357,7 @@ function setupMentorTabs() {
         </div>
         <div class="icon-parent">
           <div class="icon">
+          <img src="../img/bookmark_off.svg">
             <div class="controltoggle-icon">
               <div class="icon2">
                 <div class="color"></div>

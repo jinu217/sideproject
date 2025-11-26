@@ -18,6 +18,7 @@ if (!isset($isModal))     $isModal     = false;                // 🔑 모달인
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
     <!-- 공통 스타일 (폰 프레임 등) -->
     <link rel="stylesheet" href="/tishoo/common/phone_frame.css">

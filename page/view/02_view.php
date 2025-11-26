@@ -82,7 +82,7 @@
                 								</div>
               							</div>
             						</div>
-            						<img class="basic-icon-set7" alt="" id="basicIconSet">
+            						<img src="../img/basic-icon-set.svg" class="basic-icon-set7" alt="" id="basicIconSet">
             						
           					</div>
         				</div>
@@ -111,6 +111,7 @@
                 								</div>
               							</div>
               							<div class="icon">
+											<img src="../img/bookmark_off.svg">
                 								<div class="controltoggle-icon">
                   									<div class="icon2">
                     										<div class="color">
@@ -156,6 +157,7 @@
                 								</div>
               							</div>
               							<div class="icon">
+											<img src="../img/bookmark_off.svg">
                 								<div class="controltoggle-icon">
                   									<div class="icon2">
                     										<div class="color">
@@ -201,6 +203,7 @@
                 								</div>
               							</div>
               							<div class="icon">
+											<img src="../img/bookmark_off.svg">
                 								<div class="controltoggle-icon">
                   									<div class="icon2">
                     										<div class="color">
@@ -246,6 +249,7 @@
                 								</div>
               							</div>
               							<div class="icon">
+											<img src="../img/bookmark_off.svg">
                 								<div class="controltoggle-icon">
                   									<div class="icon2">
                     										<div class="color">

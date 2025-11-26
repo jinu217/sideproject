@@ -31,7 +31,7 @@
                 								</div>
               							</div>
             						</div>
-            						<img class="basic-icon-set" alt="">
+            						<img src="../img/basic-icon-set.svg" class="basic-icon-set" alt="">
             						
           					</div>
         				</div>
@@ -49,7 +49,7 @@
                 								</div>
               							</div>
             						</div>
-            						<div class="actions-parent" id="frameContainer1">
+            						<div id="timlimit_project_list" class="actions-parent" id="frameContainer1">
               							<div class="actions">
                 								<div class="buttontextassistive">
                   									<div class="content">
@@ -852,6 +852,12 @@
   	
   	
   	<script>
+			var timelimitBtn = document.getElementById("timlimit_project_list");
+			if (timelimitBtn) {
+				timelimitBtn.addEventListener("click", function () {
+					window.location.href = "07_timelimit_project_list.php";
+				});
+			}
 			var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
 			if (arrowBackIosNewIcon) {
 				arrowBackIosNewIcon.addEventListener("click", function (e) {

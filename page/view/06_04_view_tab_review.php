@@ -9,7 +9,6 @@
         <div class="parent">
             <div class="div">전체 후기</div>
             <div class="div"><?= (int)$reviewCount ?></div>
-            <img class="iconchevron-right" src="../img/chevron_right.svg" alt="">
         </div>
 
         <!-- 하단: 평점 요약 + 후기 리스트 -->
@@ -62,7 +61,6 @@
                     <div class="div9">
                         <!-- 상단: 별점 + 점수 -->
                         <div class="star-group">
-                            <!-- 여긴 한 개의 아이콘만 보여주고, 숫자로 점수 표시 -->
                             <img class="frame-child3" src="../img/star_on.svg" alt="">
                             <div class="div10"><?= $ratingText ?></div>
                         </div>
@@ -70,19 +68,17 @@
                         <!-- 더보기 아이콘 (기획 나중에) -->
                         <img class="more-horiz-icon" src="../img/more_horiz.svg" alt="more">
 
-                        <!-- 타이틀: 함께한 프로젝트 -->
-                        <b class="b">함께한 프로젝트</b>
-                        <div class="ai">
-                            <?= htmlspecialchars($projectName) ?>
-                        </div>
-
                         <!-- 후기 본문 -->
                         <div class="div11">
                             <?= nl2br(htmlspecialchars($comment)) ?>
                         </div>
 
-                        <!-- 하단 바 테두리 -->
-                        <div class="item"></div>
+                        <!-- 하단 바 테두리 + 내부 텍스트/아이콘 -->
+                        <div class="item">
+                            <div class="item-label">함께한 프로젝트</div>
+                            <div class="item-title"><?= htmlspecialchars($projectName) ?></div>
+                            <img src="../img/arrow_right2.svg" class="item-arrow" alt="">
+                        </div>
 
                         <!-- 작성자 + 시간 -->
                         <div class="frame-div">
