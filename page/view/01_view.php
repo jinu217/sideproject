@@ -1,8 +1,7 @@
   	<div class="div">
     		<div class="div2">
       			<div class="arrow-back-ios-new-parent">
-        				<img class="arrow-back-ios-new-icon" alt="">
-        				
+        				<img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">			
         				<div class="div3">모집중인 프로젝트</div>
       			</div>
       			<div class="frame-parent">
@@ -64,7 +63,7 @@
                   									</div>
                 								</div>
               							</div>
-              							<img class="iconchevron-right3" alt="">
+              							<img src="../img/arrow_right.svg" class="iconchevron-right3" alt="">
               							
             						</div>
           					</div>
@@ -410,7 +409,7 @@
                   									</div>
                 								</div>
               							</div>
-              							<img class="iconchevron-right3" alt="">
+              							<img src="../img/arrow_right.svg" class="iconchevron-right3" alt="">
               							
             						</div>
           					</div>
@@ -726,7 +725,7 @@
                   									</div>
                 								</div>
               							</div>
-              							<img class="iconchevron-right3" alt="">
+              							<img src="../img/arrow_right.svg" class="iconchevron-right3" alt="">
               							
             						</div>
           					</div>
@@ -853,6 +852,12 @@
   	
   	
   	<script>
+			var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
+			if (arrowBackIosNewIcon) {
+				arrowBackIosNewIcon.addEventListener("click", function (e) {
+					window.location.href = "00_home.php";
+				});
+			}
 			var projectBox = document.getElementById("box-project-detail");
 			if (projectBox) {
 				projectBox.addEventListener("click", function () {

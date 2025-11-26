@@ -1,8 +1,7 @@
   	<div class="div">
     		<div class="frame-parent">
       			<div class="arrow-back-ios-new-parent">
-        				<img class="arrow-back-ios-new-icon" alt="">
-        				
+        				<img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">        				
         				<div class="div2">팀원 찾기</div>
       			</div>
       			<div class="frame-group">
@@ -277,6 +276,12 @@
   	
   	
   	<script>
+			var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
+			if (arrowBackIosNewIcon) {
+				arrowBackIosNewIcon.addEventListener("click", function (e) {
+					window.location.href = "00_home.php";
+				});
+			}
     		var frameContainer = document.getElementById("frameContainer");
     		if(frameContainer) {
       			frameContainer.addEventListener("click", function (e) {

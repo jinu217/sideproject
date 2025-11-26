@@ -131,19 +131,11 @@ $keywordOptions = [
 ?>
 
 <div class="div">
-
-    <!-- 상단 영역 -->
     <div class="frame-parent">
         <div class="frame-wrapper">
             <div class="arrow-back-ios-new-parent">
-                <!-- 🔙 뒤로가기 -->
-                <img
-                    class="arrow-back-ios-new-icon"
-                    src="../img/arrow_left.svg"
-                    alt="back"
-                    onclick="history.back()"
-                    style="cursor:pointer;"
-                >
+                <!-- 뒤로가기 아이콘 -->
+                <img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">
 
                 <div class="frame-container">
                     <div class="wrapper">
@@ -152,7 +144,7 @@ $keywordOptions = [
                 </div>
 
                 <!-- 오른쪽 아이콘 (더미) -->
-                <img class="arrow-back-ios-new-icon" alt="">
+                <img class="arrow-back-ios-icon" alt="">
             </div>
         </div>
 
@@ -282,6 +274,13 @@ $keywordOptions = [
 </div>
 
 <script>
+  var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
+  if (arrowBackIosNewIcon) {
+    arrowBackIosNewIcon.addEventListener("click", function (e) {
+      // 필요하면 이전 단계 이동
+      window.history.back();
+    });
+  }
 // --------------------------
 // 1) 별점 클릭 처리
 // --------------------------

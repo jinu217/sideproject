@@ -1,5 +1,14 @@
 <?php
 // 05_01_view.php : 프로젝트 정리 알림 모달 내용
+
+// 이 모달은 반드시 ?project_id=1 이런 식으로 열려야 함.
+// ex) openModal('05_01_project_finish.php?project_id=1');
+$project_id = isset($_GET['project_id']) ? (int)$_GET['project_id'] : 0;
+
+// 데모용: project_id 없으면 1로
+if ($project_id <= 0) {
+    $project_id = 1;
+}
 ?>
 
 <div class="notification-page">
@@ -42,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // "프로젝트 정리하기" -> 부모 페이지 이동 + 모달 닫기
+  // "프로젝트 정리하기" -> 05_02로 이동하면서 project_id 전달 + 모달 닫기
   if (btnOrganize && window.parent) {
     btnOrganize.addEventListener("click", function () {
-      // 필요에 따라 이동 페이지 수정
-      window.parent.location.href = "05_02_project_finish.php";
+      const projectId = <?= (int)$project_id ?>;
+      window.parent.location.href = "05_02_project_finish.php?project_id=" + encodeURIComponent(projectId);
 
       if (typeof window.parent.closeModal === "function") {
         window.parent.closeModal();

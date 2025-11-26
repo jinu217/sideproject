@@ -1,6 +1,6 @@
 <div class="div">
   <div class="group-parent">
-    <img class="frame-child" alt="">
+    <img src="../img/finish_logo.svg" class="frame-child" alt="">
     
     <div class="preview-parent">
       <b class="preview">해냈어요!</b>
