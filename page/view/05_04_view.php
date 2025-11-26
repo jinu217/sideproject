@@ -1,19 +1,32 @@
 <?php
+// 05_04_view.php : 팀원 선택 화면
+
 include_once '../connect.php';
 
 // ----------------------
-// 1) 프로젝트 ID 받기
+// 1) 프로젝트 ID / 리뷰어 ID 받기
 // ----------------------
-$project_id = isset($_GET['project_id']) ? (int)$_GET['project_id'] : 1;
+$project_id  = 0;
+$reviewer_id = 0;
 
-if ($project_id <= 0) {
-    echo "<div style='padding:20px; font-family:Pretendard;'>유효한 프로젝트 ID가 없습니다.</div>";
-    exit;
+if (isset($_GET['project_id'])) {
+    $project_id = (int)$_GET['project_id'];
+} elseif (isset($_POST['project_id'])) {
+    $project_id = (int)$_POST['project_id'];
 }
+
+if (isset($_GET['reviewer_id'])) {
+    $reviewer_id = (int)$_GET['reviewer_id'];
+} elseif (isset($_POST['reviewer_id'])) {
+    $reviewer_id = (int)$_POST['reviewer_id'];
+}
+
+// 데모용 기본값
+if ($project_id <= 0)  $project_id  = 1;
+if ($reviewer_id <= 0) $reviewer_id = 1;
 
 // ----------------------
 // 2) 프로젝트 참여 인원 조회
-//    project_members + users 기준 예시
 // ----------------------
 $sql = "
     SELECT 
@@ -44,7 +57,7 @@ $memberRows = array_chunk($members, 2);
     <div class="inner">
         <div class="arrow-back-ios-new-parent">
             <!-- 뒤로가기 아이콘 -->
-            <img class="arrow-back-ios-new-icon" src="../img/arrow_left.svg" onclick="history.back()">
+            <img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">
 
             <div class="frame-wrapper">
                 <div class="wrapper">
@@ -102,7 +115,6 @@ $memberRows = array_chunk($members, 2);
                     <?php if (count($row) === 1): ?>
                         <!-- 팀원이 홀수인 경우 오른쪽 자리는 빈 박스로 맞춰줌 (선택 안 됨) -->
                         <div class="frame-wrapper2">
-                            <!-- 필요하면 비워두거나, '빈 자리' 같은 안내 넣을 수도 있음 -->
                         </div>
                     <?php endif; ?>
                 </div>
@@ -113,18 +125,26 @@ $memberRows = array_chunk($members, 2);
 </div>
 
 <script>
+  var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
+  if (arrowBackIosNewIcon) {
+    arrowBackIosNewIcon.addEventListener("click", function (e) {
+      // 필요하면 이전 단계 이동
+      window.history.back();
+    });
+  }
   // 각 팀원 카드 클릭 시 → 후기 작성 페이지로 이동
   document.querySelectorAll('.member-card').forEach(function(card) {
       card.addEventListener('click', function () {
-          const userId   = card.dataset.userId;
-          const userName = card.dataset.userName;
+          const userId    = card.dataset.userId;
+          const userName  = card.dataset.userName;
           const projectId = <?= (int)$project_id ?>;
+          const reviewerId = <?= (int)$reviewer_id ?>;
 
           // 다음 화면(후기 작성 페이지)으로 이동
-          // 필요에 따라 파일명/파라미터 수정
           const url =
               "05_05_review.php"
               + "?project_id="     + encodeURIComponent(projectId)
+              + "&reviewer_id="    + encodeURIComponent(reviewerId)
               + "&target_user_id=" + encodeURIComponent(userId)
               + "&member="         + encodeURIComponent(userName);
 

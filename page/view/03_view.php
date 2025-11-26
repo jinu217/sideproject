@@ -5,7 +5,7 @@
     <!-- 상단 타이틀 영역 -->
     <div class="inner">
         <div class="arrow-back-ios-new-parent">
-            <img class="arrow-back-ios-new-icon" alt="">
+            <img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">
             <div class="frame-wrapper">
                 <div class="wrapper">
                     <div class="div2">프로젝트 상세페이지</div>
@@ -206,6 +206,12 @@
 </div>
 
 <script>
+var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
+if (arrowBackIosNewIcon) {
+	arrowBackIosNewIcon.addEventListener("click", function (e) {
+		window.location.href = "01_project_list.php";
+	});
+}
 document.addEventListener('DOMContentLoaded', function () {
     const tabs     = document.querySelectorAll('.navi-tab');
     const detail   = document.getElementById('tab-detail');

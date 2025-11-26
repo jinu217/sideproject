@@ -1,6 +1,6 @@
 <div class="div">
   <div class="div2">
-    <img class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">
+    <img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">
     
     <div class="parent">
       <div class="div3">프로젝트 생성</div>
@@ -52,7 +52,7 @@
   if (arrowBackIosNewIcon) {
     arrowBackIosNewIcon.addEventListener("click", function (e) {
       // 필요하면 여기서 이전 단계 이동
-      // window.history.back();
+      window.history.back();
     });
   }
 
