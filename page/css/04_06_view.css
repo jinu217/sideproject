@@ -1,99 +1,109 @@
-.div {
-  	width: 100%;
-  	height: 50.875rem;
-  	position: relative;
-  	background-color: #fff;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: flex-end;
-  	text-align: left;
-  	font-size: 1.375rem;
-  	color: #1e293b;
-  	font-family: Pretendard;
-}
-.group-parent {
-  	width: 23.438rem;
-  	height: 43.313rem;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: center;
-  	gap: 1.875rem;
-}
-.frame-child {
-  	width: 7.375rem;
-  	height: 5.713rem;
-  	position: relative;
-}
-.preview-parent {
-  	align-self: stretch;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-}
-.preview {
-  	position: relative;
-  	letter-spacing: -0.03em;
-  	line-height: 140%;
-}
-.preview2 {
-  	align-self: stretch;
-  	position: relative;
-  	font-size: 1rem;
-  	letter-spacing: -0.03em;
-  	line-height: 150%;
-  	font-weight: 600;
-  	color: #475569;
-  	text-align: center;
-}
-.preview3 {
-  	width: 23.438rem;
-  	position: relative;
-  	font-size: 0.875rem;
-  	letter-spacing: -0.03em;
-  	line-height: 150%;
-  	font-weight: 600;
-  	color: #737373;
-  	text-align: center;
-  	display: inline-block;
-}
-.div2 {
-  	width: 23.438rem;
-  	background-color: #fff;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: flex-start;
-  	padding: 1.812rem 1.625rem;
-  	box-sizing: border-box;
-  	text-align: center;
-  	font-size: 1rem;
-  	color: #fff;
-}
-.div3 {
-  	align-self: stretch;
-  	height: 3.75rem;
-  	position: relative;
-  	border-radius: 40px;
-  	background-color: #1e78ff;
-    cursor: pointer;
-}
-.wrapper {
-  	position: absolute;
-  	top: 0.5rem;
-  	left: 2.219rem;
-  	width: 15.75rem;
-  	height: 2.75rem;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 0.625rem;
-  	box-sizing: border-box;
-  	flex-shrink: 0;
-}
-.div4 {
-  	position: relative;
-  	letter-spacing: -0.03em;
-  	line-height: 150%;
-  	font-weight: 600;
+/* 전체 래퍼 */
+.page-wrap {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: Pretendard;
+  color: #1e293b;
 }
 
+/* 완료 페이지 전용 */
+.finish-page {
+  text-align: center;
+}
+
+/* 가운데 바디 영역 (스크롤 생기면 여기 안에서만) */
+.finish-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 6rem; /* 아래 버튼 공간 확보 */
+  box-sizing: border-box;
+}
+
+/* 가운데 콘텐츠 묶음 */
+.group-parent {
+  width: 100%;
+  max-width: 23.438rem; /* 폰 프레임 기준 폭 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.frame-child {
+  width: 7.375rem;
+  height: 5.713rem;
+}
+
+/* 텍스트들 */
+.preview-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preview {
+  font-size: 1.375rem;
+  letter-spacing: -0.03em;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.preview2 {
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+  line-height: 150%;
+  font-weight: 600;
+  color: #475569;
+}
+
+.preview3 {
+  font-size: 0.875rem;
+  letter-spacing: -0.03em;
+  line-height: 150%;
+  font-weight: 600;
+  color: #737373;
+}
+
+/* 하단 고정 버튼 (04_04 / 04_05랑 동일 패턴) */
+.div10 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1.25rem calc(env(safe-area-inset-bottom) + 1rem);
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.div11 {
+  width: 100%;
+  height: 3.5rem;
+  background: #1e78ff;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.frame-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mvp {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 150%;
+}

@@ -1,165 +1,128 @@
 <?php
 // ===========================
-// common/layout.php : 공통 레이아웃
+// common/layout.php : 모바일/WebView 전용 레이아웃
 // ===========================
 
 // 기본값 세팅
-if (!isset($showNav))     $showNav     = true;                 // 하단 nav 사용 여부
-if (!isset($pageTitle))   $pageTitle   = 'Tishoo';             // <title>
-if (!isset($pageCss))     $pageCss     = null;                 // 문자열 or 배열
-if (!isset($extraCss))    $extraCss    = [];                   // 추가 CSS 배열
-if (!isset($view))        $view        = '';                   // 본문 view 파일 경로
-if (!isset($bottomFixed)) $bottomFixed = null;                 // 하단 고정 영역 파일
-if (!isset($isModal))     $isModal     = false;                // 🔑 모달인지 여부 (iframe 안에서만 true)
+if (!isset($showNav))     $showNav     = true;
+if (!isset($pageTitle))   $pageTitle   = 'Tishoo';
+if (!isset($pageCss))     $pageCss     = null;
+if (!isset($extraCss))    $extraCss    = [];
+if (!isset($view))        $view        = '';
+if (!isset($bottomFixed)) $bottomFixed = null;
+if (!isset($isModal))     $isModal     = false;
 ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
-    <!-- 공통 스타일 (폰 프레임 등) -->
-    <link rel="stylesheet" href="/tishoo/common/phone_frame.css">
+    <!-- 🔥 모바일/WebView에 최적화: PC 대응 불필요 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+
+    <!-- 폰트 -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+    <!-- ===========================
+         모바일 전용 공통 스타일
+         =========================== -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+            overscroll-behavior-y: contain; /* 당기면 탄성 줄이기 */
+        }
+
+        body {
+            font-family: Pretendard, sans-serif;
+        }
+
+        /* 전체 앱 컨테이너 (PC 가운데 정렬 삭제) */
+        .app-root {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 콘텐츠 페이지 (PC max-width 제거) */
+        .app-page {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+            position: relative;
+        }
+
+        /* 스크롤 영역 */
+        .app-main {
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .app-main::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 
     <?php
-    // 페이지 전용 CSS (문자열/배열 모두 지원)
+    // 페이지 단위 CSS
     if (!empty($pageCss)) {
         if (is_array($pageCss)) {
             foreach ($pageCss as $css) {
-                echo '<link rel="stylesheet" href="' . htmlspecialchars($css, ENT_QUOTES, 'UTF-8') . '">' . PHP_EOL;
+                echo '<link rel="stylesheet" href="' . htmlspecialchars($css) . '">' . PHP_EOL;
             }
         } else {
-            echo '<link rel="stylesheet" href="' . htmlspecialchars($pageCss, ENT_QUOTES, 'UTF-8') . '">' . PHP_EOL;
+            echo '<link rel="stylesheet" href="' . htmlspecialchars($pageCss) . '">' . PHP_EOL;
         }
     }
 
     // 추가 CSS
-    if (!empty($extraCss) && is_array($extraCss)) {
+    if (!empty($extraCss)) {
         foreach ($extraCss as $css) {
-            echo '<link rel="stylesheet" href="' . htmlspecialchars($css, ENT_QUOTES, 'UTF-8') . '">' . PHP_EOL;
+            echo '<link rel="stylesheet" href="' . htmlspecialchars($css) . '">' . PHP_EOL;
         }
     }
     ?>
 
-    <?php if (!$isModal): ?>
-    <!-- 🔔 공통 모달 오버레이 CSS (전체 페이지용) -->
-    <style>
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(1.05px);
-  -webkit-backdrop-filter: blur(1.05px);
-  display: none;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 7.5rem;  /* 🔥 2.5rem → 4.5rem 로 늘리기 */
-  z-index: 9999;
-}
-
-
-      .modal-iframe-wrapper {
-        width: 100%;
-        max-width: 370px;              /* phone-frame 너비 기준 */
-        padding: 0 1rem;
-        box-sizing: border-box;
-      }
-
-      .modal-iframe {
-        width: 336px;
-        height: 461px;            
-        border: none;
-        border-radius: 16px;
-        box-shadow:
-            0 0 2px rgba(0,0,0,0.08),
-            0 8px 16px rgba(0,0,0,0.12);
-        background: transparent;
-        }
-
-    </style>
-    <?php endif; ?>
 </head>
 <body>
 
 <?php if (!$isModal): ?>
-    <!-- ===========================
-         일반 페이지용 phone-frame
-         =========================== -->
-    <div class="app-root">
-        <div class="phone-frame">
-            <div class="phone-screen">
-                <?php
-                if (!empty($view) && file_exists($view)) {
-                    include $view;
-                } else {
-                    echo '<p>뷰 파일이 설정되지 않았습니다.</p>';
-                }
-                ?>
-            </div>
+<div class="app-root">
+    <div class="app-page">
 
+        <main class="app-main">
             <?php
-            // 하단 고정 영역 (있으면 우선)
-            if (!empty($bottomFixed) && file_exists($bottomFixed)) {
-                include $bottomFixed;
-            }
-            // nav 사용
-            elseif (!empty($showNav) && $showNav) {
-                $navFile = __DIR__ . '/nav.php';
-                if (file_exists($navFile)) {
-                    include $navFile;
-                }
+            if (!empty($view) && file_exists($view)) {
+                include $view;
+            } else {
+                echo '<p>뷰 파일이 설정되지 않았습니다.</p>';
             }
             ?>
-        </div>
+        </main>
 
-        <!-- 🔔 공통 모달 오버레이 (iframe 안에 모달 페이지 로드) -->
-        <div id="modalOverlay" class="modal-overlay">
-          <div class="modal-iframe-wrapper">
-            <iframe id="modalFrame" class="modal-iframe" src="about:blank" title="Modal"></iframe>
-          </div>
-        </div>
+        <?php
+        if (!empty($bottomFixed) && file_exists($bottomFixed)) {
+            include $bottomFixed;
+        } elseif (!empty($showNav) && $showNav) {
+            include __DIR__ . '/nav.php';
+        }
+        ?>
     </div>
-
-    <!-- ===========================
-         공통 모달 JS
-         =========================== -->
-    <script>
-      // 전역에서 호출: openModal('05_01_project_finich.php');
-      function openModal(url) {
-        var overlay = document.getElementById('modalOverlay');
-        var frame   = document.getElementById('modalFrame');
-        if (!overlay || !frame) return;
-
-        frame.src = url;
-        overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';  // 배경 스크롤 방지
-      }
-
-      function closeModal() {
-        var overlay = document.getElementById('modalOverlay');
-        var frame   = document.getElementById('modalFrame');
-        if (!overlay || !frame) return;
-
-        overlay.style.display = 'none';
-        frame.src = 'about:blank';
-        document.body.style.overflow = '';
-      }
-    </script>
+</div>
 
 <?php else: ?>
-    <!-- ===========================
-         모달 전용 레이아웃 (phone-frame X)
-         이 안에는 순수 view만 들어감
-         =========================== -->
-    <?php
-    if (!empty($view) && file_exists($view)) {
-        include $view;
-    } else {
-        echo '<p>모달 뷰 파일이 설정되지 않았습니다.</p>';
-    }
-    ?>
+    <!-- 모달 전용 -->
+    <?php include $view; ?>
 <?php endif; ?>
 
 </body>

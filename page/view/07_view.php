@@ -1,433 +1,293 @@
-  	<div class="default">
-    		<div class="arrow-back-ios-new-parent">
-      			<img src="../img/arrow_left.svg" class="arrow-back-ios-new-icon" alt="" id="arrowBackIosNewIcon">
-      			
-      			<div class="frame-wrapper"> 
-        				<div class="wrapper">
-          					<div class="div">마감임박 프로젝트!</div>
-        				</div>
-      			</div>
-    		</div>
-    		<div class="frame-parent">
-      			<div class="iconsearch-parent">
-        				<div class="iconsearch">
-        				</div>
-        				<div class="div2">프로젝트, 멘토, 태그 검색</div>
-      			</div>
-      			<div class="frame-container">
-        				<div class="frame-group">
-          					<div class="frame-div">
-            						<div class="container">
-              							<div class="div3">전체</div>
-            						</div>
-            						<div class="divider">
-            						</div>
-            						<div class="frame-div">
-              							<div class="parent">
-                								<div class="div3">도메인</div>
-                								<img class="iconchevron-right" alt="">
-                								
-              							</div>
-              							<div class="parent">
-                								<div class="div3">포지션</div>
-                								<img class="iconchevron-right" alt="">
-                								
-              							</div>
-            						</div>
-          					</div>
-          					<img src="../img/basic-icon-set-1.svg" class="basic-icon-set-1" alt="">
-          					
-        				</div>
-      			</div>
-    		</div>
-    		<div class="frame-parent3">
-      			<div class="grid-01-parent">
-        				<img src="../img/grid-01.svg" class="grid-01-icon" alt="" id="grid01Icon">
-        				
-        				<img src="../img/basic-icon-set.svg" class="basic-icon-set" alt="">
-        				
-      			</div>
-      			<div class="component-2-parent">
-        				<div class="component-2">
-          					<div class="image-parent">
-            						<div class="image">
-              							<div class="overlay">
-              							</div>
-            						</div>
-            						<div class="parent2">
-              							<div class="hipster">부업/창업</div>
-              							<div class="frame-parent4">
-                								<div class="frame-parent5">
-                  									<div class="frame-parent6">
-                    										<div class="group-parent">
-                      											<img class="frame-child" alt="">
-                      											
-                      											<div class="div7">하우스테이너ㅋ</div>
-                    										</div>
-                    										<div class="chip">
-                      											<b class="hipster">Hipster 필요해요</b>
-                    										</div>
-                  									</div>
-                  									<div class="ai-ux">AI 기반 UX 리디자인</div>
-                								</div>
-                								<div class="parent3">
-                  									<div class="div8">온/오프 혼합</div>
-                  									<div class="div9">·</div>
-                  									<div class="div8">2개월</div>
-                  									<div class="div9">·</div>
-                  									<div class="parent4">
-                    										<div class="div8">팀원 6명</div>
-                    										<img class="iconchevron-right3" alt="">
-                    										
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="buttonsolidprimary">
-            						<div class="content">
-              							<div class="content2">
-                								<div class="iconemergency">
-                  									<div class="container2">
-                  									</div>
-                  									<img class="vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="d-parent">
-                  									<div class="d-">D-</div>
-                  									<div class="div13">3</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="interaction">
-              							<div class="interaction2">
-              							</div>
-            						</div>
-          					</div>
-          					<div class="icon-wrapper">
-            						<div class="icon">
-              							<div class="controltoggle-icon">
-                								<div class="icon2">
-                  									<div class="color">
-                  									</div>
-                								</div>
-                								<div class="interaction3">
-                  									<div class="interaction4">
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="component-3" id="component3Container">
-          					<div class="image-parent">
-            						<div class="image">
-              							<div class="overlay">
-              							</div>
-            						</div>
-            						<div class="parent2">
-              							<div class="hipster">부업/창업</div>
-              							<div class="frame-parent4">
-                								<div class="frame-parent5">
-                  									<div class="frame-parent6">
-                    										<div class="group-parent">
-                      											<img class="frame-child" alt="">
-                      											
-                      											<div class="div7">온디자인</div>
-                    										</div>
-                    										<div class="chip2">
-                      											<b class="hipster">Hacker 필요해요</b>
-                    										</div>
-                  									</div>
-                  									<div class="ai-ux2">대학생을 위한 AI플랫폼</div>
-                								</div>
-                								<div class="parent3">
-                  									<div class="div8">온/오프 혼합</div>
-                  									<div class="div9">·</div>
-                  									<div class="div8">2개월</div>
-                  									<div class="div9">·</div>
-                  									<div class="parent4">
-                    										<div class="div8">팀원 6명</div>
-                    										<img class="iconchevron-right3" alt="">
-                    										
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="buttonsolidprimary">
-            						<div class="content">
-              							<div class="content2">
-                								<div class="iconemergency">
-                  									<div class="container2">
-                  									</div>
-                  									<img class="vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="d-parent">
-                  									<div class="d-">D-</div>
-                  									<div class="div13">4</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="interaction">
-              							<div class="interaction2">
-              							</div>
-            						</div>
-          					</div>
-          					<div class="icon-wrapper">
-            						<div class="icon">
-              							<div class="controltoggle-icon">
-                								<div class="icon2">
-                  									<div class="color">
-                  									</div>
-                								</div>
-                								<div class="interaction3">
-                  									<div class="interaction4">
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="component-2">
-          					<div class="image-parent">
-            						<div class="image">
-              							<div class="overlay">
-              							</div>
-            						</div>
-            						<div class="parent2">
-              							<div class="hipster">부업/창업</div>
-              							<div class="frame-parent4">
-                								<div class="frame-parent5">
-                  									<div class="frame-parent6">
-                    										<div class="group-parent">
-                      											<img class="frame-child" alt="">
-                      											
-                      											<div class="div7">아술아장</div>
-                    										</div>
-                    										<div class="chip3">
-                      											<b class="hipster">Hustler 필요해요</b>
-                    										</div>
-                  									</div>
-                  									<div class="ai-ux2">SAAS기반 AI+교육서비스</div>
-                								</div>
-                								<div class="parent3">
-                  									<div class="div8">온/오프 혼합</div>
-                  									<div class="div9">·</div>
-                  									<div class="div8">2개월</div>
-                  									<div class="div9">·</div>
-                  									<div class="parent4">
-                    										<div class="div8">팀원 6명</div>
-                    										<img class="iconchevron-right3" alt="">
-                    										
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="buttonsolidprimary">
-            						<div class="content">
-              							<div class="content2">
-                								<div class="iconemergency">
-                  									<div class="container2">
-                  									</div>
-                  									<img class="vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="d-parent">
-                  									<div class="d-">D-</div>
-                  									<div class="div13">4</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="interaction">
-              							<div class="interaction2">
-              							</div>
-            						</div>
-          					</div>
-          					<div class="icon-wrapper">
-            						<div class="icon">
-              							<div class="controltoggle-icon">
-                								<div class="icon2">
-                  									<div class="color">
-                  									</div>
-                								</div>
-                								<div class="interaction3">
-                  									<div class="interaction4">
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="component-2">
-          					<div class="image-parent">
-            						<div class="image">
-              							<div class="overlay">
-              							</div>
-            						</div>
-            						<div class="parent2">
-              							<div class="hipster">부업/창업</div>
-              							<div class="frame-parent4">
-                								<div class="frame-parent5">
-                  									<div class="frame-parent6">
-                    										<div class="group-parent">
-                      											<img class="frame-child" alt="">
-                      											
-                      											<div class="div7">웩스유아인</div>
-                    										</div>
-                    										<div class="chip3">
-                      											<b class="hipster">Hustler 필요해요</b>
-                    										</div>
-                  									</div>
-                  									<div class="ai-ux2">ChatGPT UX 개선</div>
-                								</div>
-                								<div class="parent3">
-                  									<div class="div8">온/오프 혼합</div>
-                  									<div class="div9">·</div>
-                  									<div class="div8">2개월</div>
-                  									<div class="div9">·</div>
-                  									<div class="parent4">
-                    										<div class="div8">팀원 6명</div>
-                    										<img class="iconchevron-right3" alt="">
-                    										
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="buttonsolidprimary">
-            						<div class="content">
-              							<div class="content2">
-                								<div class="iconemergency">
-                  									<div class="container2">
-                  									</div>
-                  									<img class="vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="d-parent">
-                  									<div class="d-">D-</div>
-                  									<div class="div13">5</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="interaction">
-              							<div class="interaction2">
-              							</div>
-            						</div>
-          					</div>
-          					<div class="icon-wrapper">
-            						<div class="icon">
-              							<div class="controltoggle-icon">
-                								<div class="icon2">
-                  									<div class="color">
-                  									</div>
-                								</div>
-                								<div class="interaction3">
-                  									<div class="interaction4">
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="component-2">
-          					<div class="image-parent">
-            						<div class="image">
-              							<div class="overlay">
-              							</div>
-            						</div>
-            						<div class="parent2">
-              							<div class="hipster">부업/창업</div>
-              							<div class="frame-parent4">
-                								<div class="frame-parent5">
-                  									<div class="frame-parent6">
-                    										<div class="group-parent">
-                      											<img class="frame-child" alt="">
-                      											
-                      											<div class="div7">조태연입니다</div>
-                    										</div>
-                    										<div class="chip">
-                      											<b class="hipster">Hipster 필요해요</b>
-                    										</div>
-                  									</div>
-                  									<div class="ai-ux2">SNS 수익화를 돕는 AI 개발 및 런칭</div>
-                								</div>
-                								<div class="parent3">
-                  									<div class="div8">온/오프 혼합</div>
-                  									<div class="div9">·</div>
-                  									<div class="div8">2개월</div>
-                  									<div class="div9">·</div>
-                  									<div class="parent4">
-                    										<div class="div8">팀원 6명</div>
-                    										<img class="iconchevron-right3" alt="">
-                    										
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-          					<div class="buttonsolidprimary">
-            						<div class="content">
-              							<div class="content2">
-                								<div class="iconemergency">
-                  									<div class="container2">
-                  									</div>
-                  									<img class="vector-icon" alt="">
-                  									
-                								</div>
-                								<div class="d-parent">
-                  									<div class="d-">D-</div>
-                  									<div class="div13">6</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="interaction">
-              							<div class="interaction2">
-              							</div>
-            						</div>
-          					</div>
-          					<div class="icon-wrapper">
-            						<div class="icon">
-              							<div class="controltoggle-icon">
-                								<div class="icon2">
-                  									<div class="color">
-                  									</div>
-                								</div>
-                								<div class="interaction3">
-                  									<div class="interaction4">
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-    		</div>
-  	</div>
-  	
-  	
-  	
-  	
-  	<script>
-			var arrowBackIosNewIcon = document.getElementById("arrowBackIosNewIcon");
-			if (arrowBackIosNewIcon) {
-				arrowBackIosNewIcon.addEventListener("click", function (e) {
-					window.location.href = "01_project_list.php";
-				});
-			}
-    		var grid01Icon = document.getElementById("grid01Icon");
-    		if(grid01Icon) {
-      			grid01Icon.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var component3Container = document.getElementById("component3Container");
-    		if(component3Container) {
-      			component3Container.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    </script>
+<?php
+// 07_notification.php
+
+include_once '../connect.php';
+
+// 1) 현재 유저 ID (?user=... 없으면 1)
+$current_user_id = isset($_GET['user']) ? (int)$_GET['user'] : 1;
+if ($current_user_id <= 0) {
+    $current_user_id = 1;
+}
+?>
+
+<div class="container">
+    <div class="header">
+        <div class="container2">
+            <img src="../img/arrow_left.svg" class="button-icon" alt="" id="back-arrow">
+            <div class="heading-1">
+                <b class="b">알림</b>
+            </div>
+        </div>
+        <div class="container3">
+            <img src="../img/search.svg" class="button-icon2" alt="">
+            <img src="../img/setting2.svg" class="button-icon2" alt="">
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class="container5">
+            <div class="heading-3">
+                <b class="b2">알림 금지 모드</b>
+            </div>
+            <div class="container6">
+                <div class="text">
+                    <div class="div">07:00</div>
+                </div>
+                <div class="text2">
+                    <div class="div2">부터</div>
+                </div>
+                <div class="text3">
+                    <div class="div">18:30</div>
+                </div>
+                <div class="text4">
+                    <div class="div2">까지 알림 금지</div>
+                </div>
+            </div>
+        </div>
+        <div class="container7">
+            <div class="container8"></div>
+        </div>
+    </div>
+
+    <div class="container9">
+        <div class="container10">
+            <div class="container11">
+                <div class="heading-2">
+                    <b class="b3">중요 알림</b>
+                </div>
+            </div>
+
+            <!-- 중요 알림 1 -->
+            <div class="container12">
+                <div class="container13">
+                    <div class="container14">
+                        <div class="container15">
+                            <div class="image"></div>
+                        </div>
+                    </div>
+                    <div class="container-icon" alt="">
+                        <img src="../img/notification1.svg">
+                    </div>
+
+                    <div class="container16">
+                        <div class="container17">
+                            <div class="container18">
+                                <div class="heading-32">
+                                    <b class="b3">팀 합류 제안</b>
+                                </div>
+                                <div class="text5">
+                                    <b class="b5">중요</b>
+                                </div>
+                            </div>
+                            <div class="text6">
+                                <div class="div5">방금 전</div>
+                            </div>
+                        </div>
+                        <div class="div6">'여행 기록 앱' 프로젝트에서 개발자 포지션으로 합류를 제안했어요!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 중요 알림 2 -->
+            <div class="container19">
+                <div class="container20">
+                    <div class="container21">
+                        <div class="container22">
+                            <div class="image"></div>
+                        </div>
+                        <div class="container-icon2" alt="">
+                            <img src="../img/notification2.svg">
+                        </div>
+                    </div>
+                    <div class="container23">
+                        <div class="container17">
+                            <div class="container25">
+                                <div class="heading-32">
+                                    <b class="b3">지원 결과 안내</b>
+                                </div>
+                                <div class="text5">
+                                    <b class="b5">중요</b>
+                                </div>
+                            </div>
+                            <div class="text6">
+                                <div class="div5">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="ai">축하합니다! 'AI 챗봇 서비스' 프로젝트에 합류하게 되셨습니다. 팀 채팅방을 확인해보세요.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 중요 알림 3 : 프로젝트 완료 안내 (✅ 여기 클릭 시 모달) -->
+            <div class="container19-1" id="project-finish">
+                <div class="container20">
+                    <div class="container21">
+                        <div class="container22">
+                            <div class="image"></div>
+                        </div>
+                        <div class="container-icon2" alt="">
+                            <img src="../img/notification2.svg">
+                        </div>
+                    </div>
+                    <div class="container23">
+                        <div class="container17">
+                            <div class="container32">
+                                <div class="heading-32">
+                                    <b class="b3">프로젝트 완료 안내</b>
+                                </div>
+                                <div class="text5">
+                                    <b class="b5">중요</b>
+                                </div>
+                            </div>
+                            <div class="text6">
+                                <div class="div5">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="ai">축하합니다! 'AI 챗봇 서비스' 프로젝트가 성공적으로 완료되었습니다. 프로젝트 후기를 남겨보세요.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 어제 알림 -->
+        <div class="container33">
+            <div class="container34">
+                <b class="div2">어제</b>
+            </div>
+            <div class="container35">
+                <div class="container36">
+                    <div class="container21">
+                        <div class="container22">
+                            <div class="image"></div>
+                        </div>
+                        <div class="container-icon2" alt="">
+                            <img src="../img/notification3.svg">
+                        </div>
+                    </div>
+                    <div class="container39">
+                        <div class="container40">
+                            <div class="container41">
+                                <div class="heading-32">
+                                    <b class="b11">내 글에 반응</b>
+                                </div>
+                            </div>
+                            <div class="text6">
+                                <div class="div5">오후 3:45</div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <div class="div10">김티슈님이 '사이드 프로젝트 꿀팁 공유합니다' 글을 좋아합니다.</div>
+                        </div>
+                    </div>
+                </div>
+                <img class="button-icon4" alt="">
+            </div>
+
+            <div class="container42">
+                <div class="container36">
+                    <div class="container21">
+                        <div class="container22">
+                            <div class="image"></div>
+                        </div>
+                        <div class="container-icon2" alt="">
+                            <img src="../img/notification4.svg">
+                        </div>
+                    </div>
+                    <div class="container39">
+                        <div class="container17">
+                            <div class="container48">
+                                <div class="heading-35">
+                                    <b class="b2">새로운 댓글</b>
+                                </div>
+                            </div>
+                            <div class="text6">
+                                <div class="div5">오전 10:20</div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <div class="div12">박디자이너님이 회원님의 글에 댓글을 남겼습니다: "정말 유용한 정보네요! 감사합니다."</div>
+                        </div>
+                    </div>
+                </div>
+                <img class="button-icon4" alt="">
+            </div>
+        </div>
+
+        <!-- 11.23 알림 -->
+        <div class="container49">
+            <div class="container11">
+                <b class="div2">11.23 토요일</b>
+            </div>
+            <div class="container51">
+                <div class="container52">
+                    <div class="container21">
+                        <div class="container22">
+                            <div class="image"></div>
+                        </div>
+                        <div class="container-icon2" alt="">
+                            <img src="../img/notification5.svg">
+                        </div>
+                    </div>
+                    <div class="container39">
+                        <div class="container17">
+                            <div class="text14">
+                                <b class="b14">이벤트 당첨</b>
+                            </div>
+                            <div class="text15">
+                                <div class="div13">11.23</div>
+                            </div>
+                        </div>
+                        <div class="paragraph3">
+                            <div class="div14">🎉 11월 활동왕 이벤트에 당첨되셨습니다! 상품 수령 정보를 입력해주세요.</div>
+                        </div>
+                    </div>
+                </div>
+                <img class="button-icon6" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ 프로젝트 정리 모달 -->
+<div id="project-finish-modal-backdrop" class="project-modal-backdrop" style="display:none;">
+    <div class="project-modal-inner">
+        <iframe
+            id="project-finish-modal-iframe"
+            class="project-modal-iframe"
+            src="07_01_project_finish.php?user=<?= $current_user_id ?>"
+            frameborder="0">
+        </iframe>
+    </div>
+</div>
+
+<script>
+  // 🔙 뒤로가기 (마이페이지로, 같은 유저 유지)
+  var timmateBox = document.getElementById("back-arrow");
+  if (timmateBox) {
+    timmateBox.addEventListener("click", function () {
+      window.history.back();
+    });
+  }
+
+  // ✅ 프로젝트 완료 알림 클릭 시 모달 열기
+  var projectFinishCard    = document.getElementById("project-finish");
+  var projectModalBackdrop = document.getElementById("project-finish-modal-backdrop");
+
+  if (projectFinishCard && projectModalBackdrop) {
+    projectFinishCard.addEventListener("click", function (e) {
+      projectModalBackdrop.style.display = "flex";
+      document.body.style.overflow = "hidden"; // 스크롤 잠그기
+    });
+  }
+
+  // ✅ 07_01에서 보내는 postMessage 받아서 모달 닫기
+  window.addEventListener("message", function (event) {
+    if (event.data && event.data.action === "closeProjectFinishModal") {
+      var modal = document.getElementById("project-finish-modal-backdrop");
+      if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    }
+  });
+</script>

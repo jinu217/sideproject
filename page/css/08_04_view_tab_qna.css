@@ -1,0 +1,232 @@
+.qna-card {
+    width: 92%; /* 부모(내용 영역) 기준 꽉 채움 */
+    left: 1rem;
+    position: relative;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.187rem;
+    background: #fff;
+    text-align: left;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    color: #0f0f0f;
+    /* ⛔ max-width, margin:0 auto 절대 X */
+}
+.qna-section {
+  	width: 100%;
+  	height: 33.256rem;
+  	position: relative;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0rem 1.25rem;
+  	box-sizing: border-box;
+  	gap: 2rem;
+  	text-align: left;
+  	font-size: 0.875rem;
+  	color: #101828;
+  	font-family: Arial;
+}
+.qna-container {
+  	align-self: stretch;
+  	height: 4.438rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.25rem;
+  	font-size: 1.375rem;
+}
+.qna-heading-3 {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: center;
+}
+.qna-qa {
+  	position: relative;
+  	line-height: 1.75rem;
+    font-weight: 550;
+}
+.qna-paragraph {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	font-size: 0.75rem;
+  	color: #6a7282;
+}
+.qna-div {
+  	position: relative;
+  	line-height: 1.219rem;
+}
+.qna-container2 {
+  	align-self: stretch;
+  	height: 13.894rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 1.5rem;
+}
+.qna-qnaitem {
+  	align-self: stretch;
+  	height: 6.2rem;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 0.75rem;
+}
+.qna-container-icon {
+   height: 2.25rem;
+   width: 2.25rem;
+   border-radius: 13421800px;
+   background: #E5E7EB;
+
+   display: flex;            /* 중앙 정렬을 위한 핵심 */
+   justify-content: center;  
+   align-items: center;      
+   overflow: hidden;         /* 필요시 아이콘 넘침 방지 */
+}
+
+.qna-container-icon img {
+   width: 50%;               /* 아이콘 크기 조정 (원하면 수정 가능) */
+   height: auto;
+}
+
+.qna-container3 {
+  	width: 17.938rem;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 0.312rem;
+}
+.qna-container4 {
+  	align-self: stretch;
+  	height: 1.25rem;
+  	display: flex;
+  	align-items: center;
+  	gap: 0.5rem;
+}
+.qna-text {
+  	height: 1.25rem;
+  	width: 6.125rem;
+  	position: relative;
+}
+.qna-b {
+  	position: absolute;
+  	top: -0.075rem;
+  	left: 0rem;
+  	line-height: 1.25rem;
+  	flex-shrink: 0;
+}
+.qna-text2 {
+  	height: 0.938rem;
+  	width: 3.025rem;
+  	position: relative;
+  	font-size: 0.625rem;
+  	color: #99a1af;
+}
+.qna-div3 {
+  	position: absolute;
+  	top: -0.075rem;
+  	left: 0rem;
+  	line-height: 0.938rem;
+  	flex-shrink: 0;
+}
+.qna-container5 {
+  	align-self: stretch;
+  	border-radius: 0px 16px 16px 16px;
+  	background-color: #eff6ff;
+  	display: flex;
+  	align-items: center;
+  	padding: 0.812rem 0.875rem;
+  	color: #1e2939;
+}
+.qna-div4 {
+  	position: relative;
+  	line-height: 1.422rem;
+}
+.qna-button {
+  	width: 3.263rem;
+  	height: 1rem;
+  	display: flex;
+  	align-items: flex-start;
+  	text-align: center;
+  	font-size: 0.75rem;
+  	color: #99a1af;
+}
+.qna-div5 {
+  	flex: 1;
+  	position: relative;
+  	line-height: 1rem;
+}
+.qna-qnaitem2 {
+  	align-self: stretch;
+  	height: 6.2rem;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 0.75rem;
+  	font-size: 0.75rem;
+}
+.qna-container7 {
+  	align-self: stretch;
+  	height: 1.25rem;
+  	display: flex;
+  	align-items: center;
+  	gap: 0.5rem;
+  	font-size: 0.875rem;
+}
+.qna-container8 {
+  	align-self: stretch;
+  	border-radius: 0px 16px 16px 16px;
+  	background-color: #f3f4f6;
+  	display: flex;
+  	align-items: center;
+  	padding: 0.812rem 0.875rem;
+  	gap: 0.5rem;
+  	color: #6a7282;
+}
+.qna-text5 {
+  	height: 1rem;
+  	width: 0.875rem;
+  	display: flex;
+  	align-items: flex-start;
+}
+.qna-div8 {
+  	position: relative;
+  	font-size: 0.875rem;
+  	line-height: 1.422rem;
+}
+.qna-button2 {
+  	width: 3.263rem;
+  	height: 1rem;
+  	display: flex;
+  	align-items: flex-start;
+  	text-align: center;
+  	color: #99a1af;
+}
+.qna-container9 {
+  	align-self: stretch;
+  	height: 4.75rem;
+  	border-radius: 16px;
+  	background-color: #f9fafb;
+  	border: 0.8px solid #f3f4f6;
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 1.05rem 1.05rem 0.05rem;
+  	color: #99a1af;
+}
+.qna-text-area {
+  	align-self: stretch;
+  	height: 3.75rem;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: flex-start;
+}
+.qna-div10 {
+  	position: relative;
+  	line-height: 1.25rem;
+}

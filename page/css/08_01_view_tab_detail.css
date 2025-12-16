@@ -1,0 +1,81 @@
+.detail-card {
+    width: 92%; /* 부모(내용 영역) 기준 꽉 채움 */
+    left: 1rem;
+    position: relative;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.187rem;
+    background: #fff;
+    text-align: left;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    color: #0f0f0f;
+    /* ⛔ max-width, margin:0 auto 절대 X */
+}
+.detail-parent {
+  	width: 100%;
+  	height: 16.625rem;
+  	position: relative;
+  	border-radius: 12px;
+  	border: 1px solid rgba(112, 115, 124, 0.16);
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 1rem 0.75rem 0.875rem;
+  	gap: 1.187rem;
+  	text-align: left;
+  	font-size: 0.75rem;
+  	color: #0f0f0f;
+  	font-family: Pretendard;
+}
+.detail-div {
+  	width: 18.531rem;
+  	height: 4.163rem;
+  	position: relative;
+  	font-size: 0.875rem;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.detail-uxui-container {
+  	width: 19.4rem;
+  	height: 4.444rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 500;
+  	color: #737373;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.detail-uxui {
+  	margin: 0;
+  	font-family: inherit;
+  	font-size: inherit;
+  	padding-left: 1.333rem;
+}
+.detail-div2 {
+  	width: 18.531rem;
+  	height: 3.375rem;
+  	position: relative;
+  	letter-spacing: -0.03em;
+  	line-height: 150%;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	flex-shrink: 0;
+}
+.detail-txt {
+  	width: 100%;
+}
+.detail-span {
+  	color: #737373;
+}
+

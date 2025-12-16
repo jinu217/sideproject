@@ -2,7 +2,7 @@
 // 04_06_new_project.php : 프로젝트 생성 화면
 
 $pageTitle  = '팀원찾기 | Tishoo';
-$pageCss   = '/tishoo/page/css/04_06_view.css';
+$pageCss   = '../page/css/04_06_view.css';
 $view      = __DIR__ . '/view/04_06_view.php';
 $showNav   = false;
 
