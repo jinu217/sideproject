@@ -16,31 +16,34 @@ XAMPP 실행 → Apache, MySQL 둘 다 Start
 
 프로젝트는 반드시 아래 경로에 설치해야 합니다:  
 
-C:\xampp\htdocs\sideproject\3sideproject  
+C:\xampp\htdocs\tishoo  
 
 
 최종 폴더 구조 예시:  
 
 htdocs  
- └─ sideproject  
-     └─ 3sideproject  
-         ├─ index.php  
-         ├─ 00_home.php  
-         ├─ connect.php  
-         ├─ view/  
-         ├─ img/  
-         └─ 기타 PHP 파일  
+ └─ tishoo  
+     └─ connect.php  
+     └─ common/  
+     └─ img/  
+     └─ page  
+         └─ 00_home.php  
+            ├─ view/  
+               ├─ 00_view.php  
+            ├─ css/  
+               └─ 00_view.css  
+      
 
 ## 🌐 3. 로컬 서버 접속 주소  
 
 사이트 홈:  
 
-http://localhost/sideproject/3sideproject/  
+http://localhost/tishoo/page/00_home.php  
 
 
 특정 유저 프로필 페이지:  
 
-http://localhost/sideproject/3sideproject/06_user_profile.php?user_id=1  
+http://localhost/tishoo/page/06_user_profile.php?user=1  
 
 ## 🗄️ 4. 데이터베이스 Import (tishoo.sql)  
 ### ✔️ 4-1. phpMyAdmin 접속  

@@ -145,7 +145,6 @@ $memberRows = array_chunk($members, 2);
       window.history.back();
     });
   }
-
   // 각 팀원 카드 클릭 시 → 후기 작성 페이지로 이동
   document.querySelectorAll('.member-card').forEach(function(card) {
       card.addEventListener('click', function () {
